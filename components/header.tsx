@@ -12,7 +12,7 @@ import { ModeToggle } from './ui/mode-toggle';
 
 export default function Header() {
 	return (
-		<div>
+		<div className='mt-2'>
 			<NavigationMenu>
 				<NavigationMenuList>
 					<NavigationMenuItem>
