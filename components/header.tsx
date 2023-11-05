@@ -8,16 +8,12 @@ import {
 	navigationMenuTriggerStyle,
 } from './ui/navigation-menu';
 import Link from 'next/link';
-import { ModeToggle } from './ui/mode-toggle';
 
 export default function Header() {
 	return (
 		<div className='m-2'>
 			<NavigationMenu>
 				<NavigationMenuList>
-					<NavigationMenuItem>
-						<ModeToggle />
-					</NavigationMenuItem>
 					<NavigationMenuItem>
 						<Link href='/about' legacyBehavior passHref>
 							<NavigationMenuLink className={navigationMenuTriggerStyle()}>About</NavigationMenuLink>

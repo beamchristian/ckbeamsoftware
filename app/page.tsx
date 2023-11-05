@@ -7,7 +7,7 @@ export default function Home() {
 			<Hero
 				image={BackGroundImage}
 				altText={'Back ground image'}
-				title={'Ckbeam-Software'}
+				title={'CKBeam Software'}
 				description={'A personal portfolio for Christian Beam'}
 			/>
 			<h1 className='text-center mt-20'>Welcome to CKBEAM SOFTWARE | Coming soon!</h1>
