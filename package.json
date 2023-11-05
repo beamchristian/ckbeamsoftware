@@ -29,7 +29,7 @@
 		"@testing-library/react": "^14.0.0",
 		"@testing-library/user-event": "^14.4.3",
 		"@types/node": "^20",
-		"@types/react": "^18",
+		"@types/react": "^18.2.35",
 		"@types/react-dom": "^18",
 		"@types/testing-library__react": "^10.2.0",
 		"@types/whatwg-fetch": "^0.0.33",
