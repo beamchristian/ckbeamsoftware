@@ -74,3 +74,10 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+.svg-background {
+	--color: hsl(var(--background));
+}
+.svg-background path {
+	fill: var(--color);
+}
