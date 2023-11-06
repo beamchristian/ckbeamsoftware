@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
-				<ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+				<ThemeProvider attribute='class' defaultTheme='dark' enableSystem disableTransitionOnChange>
 					<header className='flex gap-4 justify-between items-center'>
 						<Link className='ml-5 v-10' href='/'>
 							CKBEAM-SOFTWARE
