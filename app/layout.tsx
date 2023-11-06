@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import Link from 'next/link';
-import Header from '@/components/Header';
+import Header from '@/components/header';
 
 export const fontSans = FontSans({
 	subsets: ['latin'],
