@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -9,11 +9,16 @@ import {
 } from './ui/navigation-menu';
 import Link from 'next/link';
 
+import DarkModeSwitch from './DarkModeSwitch';
+
 export default function Header() {
 	return (
 		<div className='m-2'>
 			<NavigationMenu>
 				<NavigationMenuList>
+					<NavigationMenuItem>
+						<DarkModeSwitch />
+					</NavigationMenuItem>
 					<NavigationMenuItem>
 						<Link href='/about' legacyBehavior passHref>
 							<NavigationMenuLink className={navigationMenuTriggerStyle()}>About</NavigationMenuLink>

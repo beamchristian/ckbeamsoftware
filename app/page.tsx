@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero';
+import Hero from '@/components/ui/Hero';
 import BackGroundImage from '@/public/images/background-1.jpg';
 
 export default function Home() {

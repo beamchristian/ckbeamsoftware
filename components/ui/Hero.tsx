@@ -1,6 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-import HeroCurve from './visuals/HeroCurve';
+import HeroCurve from '../visuals/HeroCurve';
 import { HeroProps } from '@/types/Hero';
 
 const Hero = ({ image, altText, title, description }: HeroProps) => {
