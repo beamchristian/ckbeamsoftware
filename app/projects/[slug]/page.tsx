@@ -31,7 +31,7 @@ export default async function ProjectPage({
 }: ProjectPageProps) {
   const project = await getProject(slug);
   return (
-    <div className="m-4 project-container">
+    <div className="m-4 project-container min-h-screen">
       <h1 className="text-lg">{project.title}</h1>
       <div className="flex gap-3 items-baseline">
         <p className="italic pb-2">{project.date}</p>
