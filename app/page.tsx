@@ -18,7 +18,7 @@ export default async function Home() {
           <h1 className="text-center mb-6 mt-20 text-8xl">Welcome</h1>
           <hr className="h-px my-6 ml-4 bg-gray-400 border-0 dark:bg-gray-700"></hr>
         </div>
-        <div className="my-6 text-xl text-start w-[90%] sm:w-[50%]">
+        <div className="my-6 text-xl text-start w-[90%] sm:w-[50%] leading-8">
           <p className="p-4">
             I'm Christian, a passionate Full Stack Developer, with expertise in:
           </p>
@@ -51,7 +51,7 @@ export default async function Home() {
             />
             <div>
               <div className="flex flex-col items-center">
-                <h2 className="font-semibold py-1 text-center ml-2 sm:px-2">
+                <h2 className="font-semibold py-1 text-center sm:px-2">
                   {project.title}
                 </h2>
                 <hr className="h-px my-1 w-[30%] bg-gray-400 border-0 dark:bg-gray-700"></hr>
