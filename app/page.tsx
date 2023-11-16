@@ -14,9 +14,9 @@ export default async function Home() {
         description={'A personal portfolio for Christian Beam'}
       />
       <div className="flex flex-col items-center">
-        <div>
+        <div className="">
           <h1 className="text-center mb-6 mt-20 text-8xl">Welcome</h1>
-          <hr className="h-px my-6 bg-gray-400 border-0 dark:bg-gray-700"></hr>
+          <hr className="h-px my-6 ml-4 bg-gray-400 border-0 dark:bg-gray-700"></hr>
         </div>
         <div className="my-6 text-xl text-start w-[90%] sm:w-[50%]">
           <p className="p-4">
