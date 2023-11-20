@@ -12,7 +12,7 @@ export default async function Projects() {
   return (
     <div className="min-h-screen">
       <h1 className="text-center text-4xl mb-6">Projects</h1>
-      <ul className="flex flex-row flex-wrap gap-3">
+      <ul className="flex flex-row flex-wrap justify-center gap-3">
         {projects.map((project) => (
           <li
             key={project.slug}
