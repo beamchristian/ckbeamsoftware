@@ -45,7 +45,7 @@ function HomeComponent() {
                   <h2
                     className={`text-[#223740] py-2 font-bold uppercase md:text-xl ${hind.className}`}
                   >
-                    A Full-Stack Developer
+                    Full-Stack Developer | ckbeamsoftware
                   </h2>
                   <Link
                     href='/#portfolio'

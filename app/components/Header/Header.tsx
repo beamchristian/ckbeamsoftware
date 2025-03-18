@@ -14,9 +14,29 @@ function Header() {
         window.pageYOffset || document.documentElement.scrollTop;
       setIsScrolled(scrollTop > 0);
     };
-  });
+    window.addEventListener("scroll", handleScroll);
 
-  return <div>Header</div>;
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <React.Fragment>
+      <header
+        className={`${
+          isScrolled ? "headerShow" : ""
+        } fixed top-0 z-50 transition-all 
+      duration-500`}
+        style={{
+          backgroundColor: isScrolled ? "#fff" : "transparent",
+          boxShadow: isScrolled ? "#48AFDE -10px 25px 50px 10px" : "",
+        }}
+      >
+        
+      </header>
+    </React.Fragment>
+  );
 }
 
 export default Header;
