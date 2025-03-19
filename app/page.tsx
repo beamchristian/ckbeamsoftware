@@ -4,8 +4,6 @@ export default async function Home() {
   return (
     <main>
       <HomeComponent />
-      <HomeComponent />
-      <HomeComponent />
     </main>
   );
 }
