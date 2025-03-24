@@ -74,7 +74,7 @@ function Header() {
                 ></span>
               ) : (
                 <span
-                  className={`menu-effect transform opacity-100 rotate-12 
+                  className={`menu-effect transform opacity-0 rotate-12 
                                     group-hover:-rotate-12 group-hover:opacity-100`}
                 ></span>
               )}
@@ -98,7 +98,7 @@ function Header() {
                 ></span>
               ) : (
                 <span
-                  className={`menu-effect transform opacity-100 rotate-12 
+                  className={`menu-effect transform opacity-0 rotate-12 
                                     group-hover:-rotate-12 group-hover:opacity-100`}
                 ></span>
               )}
@@ -122,7 +122,7 @@ function Header() {
                 ></span>
               ) : (
                 <span
-                  className={`menu-effect transform opacity-100 rotate-12 
+                  className={`menu-effect transform opacity-0 rotate-12 
                                     group-hover:-rotate-12 group-hover:opacity-100`}
                 ></span>
               )}
@@ -146,7 +146,7 @@ function Header() {
                 ></span>
               ) : (
                 <span
-                  className={`menu-effect transform opacity-100 rotate-12 
+                  className={`menu-effect transform opacity-0 rotate-12 
                                     group-hover:-rotate-12 group-hover:opacity-100`}
                 ></span>
               )}
