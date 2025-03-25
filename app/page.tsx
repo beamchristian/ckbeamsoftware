@@ -1,5 +1,6 @@
 import { Hind } from "next/font/google";
 import HomeComponent from "./components/HomeComponent/HomeComponent";
+import MySlider from "./components/SliderCard/MySlider";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -48,6 +49,9 @@ export default async function Home() {
               field is a priority, so I'm constantly exploring new frameworks,
               tools, and best practices.
             </p>
+          </div>
+          <div className=''>
+            <MySlider />
           </div>
         </div>
       </div>

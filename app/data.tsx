@@ -126,6 +126,6 @@ export const DataArray = [
     des: "Pizza Hunt is a full-stack NoSQL application that provides a platform for pizza lovers to store and share their favorite pizza combinations with the world.",
     des1: "Pizza Hunt is built using MongoDB and Express with a RESTful API",
 
-    images: ["/pizza-hunt"],
+    images: ["/pizza-hunt.jpg"],
   },
 ];

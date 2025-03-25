@@ -6,8 +6,8 @@ function MySlider() {
   return (
     <div>
       {DataArray.map((item, index) => (
-        <div className='my-slider'>
-          <Slider item={item} index={index} />
+        <div className='my-slider' key={index}>
+          <Slider item={item} index={index} key={index} />
         </div>
       ))}
     </div>
