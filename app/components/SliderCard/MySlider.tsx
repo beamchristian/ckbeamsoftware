@@ -1,5 +1,8 @@
 import React from "react";
-import Slider from "./SliderCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import SliderCard from "./SliderCard";
 import { DataArray } from "@/app/data";
 
 function MySlider() {
@@ -7,7 +10,7 @@ function MySlider() {
     <div>
       {DataArray.map((item, index) => (
         <div className='my-slider' key={index}>
-          <Slider item={item} index={index} key={index} />
+          <SliderCard item={item} index={index} key={index} />
         </div>
       ))}
     </div>
