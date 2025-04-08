@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 
 import { SliderItem } from "@/Types/Types";
 import EyeSvg from "./Svg";
@@ -9,6 +10,7 @@ interface SliderCardProps {
 }
 
 function SliderCard({ item, index }: SliderCardProps): React.JSX.Element {
+  const router = useRouter();
   return (
     <React.Fragment>
       <div
@@ -22,6 +24,7 @@ function SliderCard({ item, index }: SliderCardProps): React.JSX.Element {
             className='w-full h-[200px] lg:h-[350px] md:h-[300px] max-w-100 rounded-lg'
           />
           <div
+            onClick={() => router.push(`/portfoliodetails/${index}`)}
             className={`absolute bottom-[270px]
                         sm:bottom-[270px]
                         left-6 rounded-lg transition

@@ -40,7 +40,7 @@ export default async function Home() {
               Recent Works
             </p>
             <p
-              className={`max-w-2xl md:pl-[80px] px-5 text-[16px]
+              className={`max-w-2xl md:pl-[80px] px-5 text-[1.2rem]
                            text-[#47626D] leading-8 mt-5 ${hind.className}`}
             >
               Explore my latest full-stack web development projects, where I
@@ -50,7 +50,11 @@ export default async function Home() {
               tools, and best practices.
             </p>
           </div>
-          <div className=''>
+          <div
+            style={{
+              transform: "translate(0px, -10.6rem)",
+            }}
+          >
             <MySlider />
           </div>
         </div>
