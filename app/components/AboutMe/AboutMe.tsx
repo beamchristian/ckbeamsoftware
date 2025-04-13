@@ -4,6 +4,7 @@ import { Hind } from "next/font/google";
 import { AboutData } from "@/app/data";
 import Image from "next/image";
 import "./AboutMe.css";
+import { AboutDataType } from "@/Types/Types";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -16,13 +17,13 @@ function AboutMe() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [mapData, setMapData] = useState(AboutData[0]);
 
-  const myFunctions = (data) => {
+  const myFunctions = (data: AboutDataType) => {
     setIsFlipped(false);
     setIsFaded(false);
     setMapData(data);
   };
 
-  const handleCardClick = (data, index) => {
+  const handleCardClick = (data: AboutDataType, index: number) => {
     setIsFlipped(true);
     setIsFaded(true);
     setSelectedIndex(index);
@@ -37,13 +38,15 @@ function AboutMe() {
       handleCardClick(AboutData[0], 0);
     }
   };
+
   const HandlePrev = () => {
     if (selectedIndex !== 0) {
       handleCardClick(AboutData[selectedIndex - 1], selectedIndex - 1);
     } else {
-      handleCardClick(AboutData[5], 5);
+      handleCardClick(AboutData[AboutData.length - 1], AboutData.length - 1);
     }
   };
+
   return (
     <>
       <div
@@ -141,7 +144,7 @@ function AboutMe() {
                 }`}
               >
                 <p
-                  className={`text-[#47626D] ${hind.className}  text-lg sm:text-base lg:text-xl transition duration-500 transform opacity-100 undefined undefined`}
+                  className={`text-[#47626D] ${hind.className} text-lg sm:text-base lg:text-xl transition duration-500 transform opacity-100 undefined undefined`}
                 >
                   My skills as
                 </p>
@@ -165,7 +168,7 @@ function AboutMe() {
                 }`}
               >
                 <div className='card-inner'>
-                  <div className='rounded-2xl cursor-pointer  text-7xl  xl:text-9xl font-recoletaBlack text-white bg-[#47626D]  p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48  transform transition duration-500 transform-preserve -rotate-6 transform-preserve'>
+                  <div className='rounded-2xl cursor-pointer  text-7xl  xl:text-9xl font-recoletaBlack text-white bg-[#47626D] p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48  transform transition duration-500 transform-preserve -rotate-6 transform-preserve'>
                     <span className='text-2xl xl:text-6xl mr-2 sm:mr-3'>*</span>
                     {mapData.count}
                   </div>
@@ -175,7 +178,7 @@ function AboutMe() {
               <div className='absolute right-10 -bottom-5 flex'>
                 <a
                   onClick={HandlePrev}
-                  className='w-12 h-12 rounded-xl mr-1 transform transition duration-500  cursor-pointer  hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#47626D]'
+                  className='w-12 h-12 rounded-xl mr-1 transform transition duration-500 cursor-pointer hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#47626D]'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'

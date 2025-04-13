@@ -1,5 +1,5 @@
 "use client";
-import { PortfolioItem } from "@/Types/Types";
+import { PortfolioDataType } from "@/Types/Types";
 import { Hind } from "next/font/google";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -13,9 +13,9 @@ const hind = Hind({
 });
 
 type PortfolioDetailsDesignProps = {
-  data: PortfolioItem;
+  data: PortfolioDataType;
   id: string;
-  DataArray: PortfolioItem[];
+  DataArray: PortfolioDataType[];
 };
 
 function index({ id, data, DataArray }: PortfolioDetailsDesignProps) {

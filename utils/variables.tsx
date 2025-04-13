@@ -225,3 +225,103 @@ export const MySliderSettings = {
     },
   ],
 };
+
+export const TestimonialSettings = {
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 2000,
+  arrows: false,
+  autoplay: false,
+  centerMode: true,
+  centerPadding: "10px",
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1760,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 1460,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 1290,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+      },
+    },
+
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
+export const service = [
+  "SEO Optimisation",
+  "Web Page Creation",
+  "Custom Software",
+  "Automization",
+  "Database Management",
+];
+export const company = ["About", "Meet the Team", "Accounts Review"];
+export const helping = ["Contact", "FAQs", "Live Chat"];
+export const legal = [
+  "Accessibility",
+  "Returns Policy",
+  "Refund Policy",
+  " Hiring Statistics",
+];

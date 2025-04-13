@@ -2,6 +2,7 @@ import { Hind } from "next/font/google";
 import HomeComponent from "./components/HomeComponent/HomeComponent";
 import MySlider from "./components/SliderCard/MySlider";
 import AboutMe from "./components/AboutMe/AboutMe";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -61,6 +62,7 @@ export default async function Home() {
         </div>
       </div>
       <AboutMe />
+      <Testimonial />
     </main>
   );
 }

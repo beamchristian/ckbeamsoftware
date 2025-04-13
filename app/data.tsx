@@ -1,6 +1,6 @@
 // this comtains the data we are gonna for AboutMe component and slider component
 
-import { PortfolioItem } from "@/Types/Types";
+import { PortfolioDataType } from "@/Types/Types";
 
 export const AboutData = [
   {
@@ -90,7 +90,7 @@ export const AboutData = [
 ];
 
 // this is for the slider
-export const DataArray: PortfolioItem[] = [
+export const DataArray: PortfolioDataType[] = [
   {
     title: "ECommerce App",
     name: "Shop Shop",

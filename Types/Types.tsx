@@ -8,11 +8,18 @@ export interface SliderItem {
 }
 
 // types for the data
-export interface PortfolioItem {
+export interface PortfolioDataType {
   title: string;
   name: string;
   repo: string;
   des: string;
   des1: string;
   images: string[];
+}
+
+export interface AboutDataType {
+  count: number;
+  title: string;
+  img: string;
+  array: string[];
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const poppins = localFont({
   src: [
@@ -33,8 +34,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}><Header/>{children}</body>
+    <html lang='en' suppressHydrationWarning>
+      <body className={poppins.className}>
+        {" "}
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
