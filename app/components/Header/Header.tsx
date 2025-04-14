@@ -28,7 +28,7 @@ function Header() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <div className={`diagonal-drawer ${isOpen ? "open" : ""}`}>
         <Drawer
           isOpen={isOpen}
@@ -154,7 +154,7 @@ function Header() {
                 className={`menu-item ${
                   selectedIndex1 === 3 ? "text-black" : ""
                 } text-[#666d47] group-hover:text-black`}
-                href='/#contact-me'
+                href='/contact-me'
                 onClick={() => setSelectedIndex1(3)}
               >
                 Contact Me
@@ -164,7 +164,7 @@ function Header() {
           </ul>
         </nav>
       </header>
-    </React.Fragment>
+    </>
   );
 }
 

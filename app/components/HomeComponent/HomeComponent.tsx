@@ -14,7 +14,7 @@ const hind = Hind({
 
 function HomeComponent() {
   return (
-    <React.Fragment>
+    <>
       <div
         id='home'
         style={{
@@ -109,7 +109,7 @@ function HomeComponent() {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

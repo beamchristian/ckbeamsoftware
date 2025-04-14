@@ -17,7 +17,7 @@ function DiagonalDrawer({
   const route = useRouter();
   const pathname = usePathname();
   return (
-    <React.Fragment>
+    <>
       <div className='relative'>
         <div
           className={`z-50 ${pathname === "/" ? "top-[0px]" : "top-[100px]"} 
@@ -226,7 +226,7 @@ function DiagonalDrawer({
           </div>
         </div>
       </header>
-    </React.Fragment>
+    </>
   );
 }
 

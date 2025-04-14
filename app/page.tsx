@@ -62,7 +62,7 @@ export default async function Home() {
         </div>
       </div>
       <AboutMe />
-      <Testimonial />
+      {/* <Testimonial /> */}
     </main>
   );
 }

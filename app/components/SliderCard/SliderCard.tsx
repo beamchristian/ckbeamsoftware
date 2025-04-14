@@ -12,7 +12,7 @@ interface SliderCardProps {
 function SliderCard({ item, index }: SliderCardProps): React.JSX.Element {
   const router = useRouter();
   return (
-    <React.Fragment>
+    <>
       <div
         className={`h-[200px] lg:h-[450px] md:h-[400px] sm:-[200px] lg:w-[650px]
                      md:w-[450px] sm:w-[300px] w-[300px] relative m-auto`}
@@ -53,7 +53,7 @@ function SliderCard({ item, index }: SliderCardProps): React.JSX.Element {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
