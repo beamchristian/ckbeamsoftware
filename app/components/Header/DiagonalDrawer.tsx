@@ -71,7 +71,7 @@ function DiagonalDrawer({
         <div className='relative'>
           <div
             className={`z-20 absolute transform-gpu ease-in-out duration-500 transition-all 
-                        scale-100 -translate-x-none -translate-y-none opacity-100 bg-[#223740] 
+                        scale-100 -translate-x-none -translate-y-none opacity-100 bg-dark-text 
                         bg-opacity-95 w-full h-screen flex flex-col sm:flex-row lg:flex-col items-center justify-center`}
           >
             <nav

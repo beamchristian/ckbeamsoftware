@@ -9,7 +9,7 @@ interface PortfolioProps {
   params: PortfolioParams;
 }
 
-const Portfolio = ({ params }: PortfolioProps) => {
+const Portfolio = async ({ params }: PortfolioProps) => {
   const data = DataArray[parseInt(params.id)];
   return (
     <>

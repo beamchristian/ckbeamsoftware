@@ -60,24 +60,24 @@ function AboutMe() {
           <h1 className='relative font-recoletaBlack text-5xl  text-[#48AFDE] mb-5 -mt-40  md:px-24 px-5'>
             About My Self
           </h1>
-          <h4 className='relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-recoleta text-[#223740] text-2xl mb-10 px-5 md:px-24'>
+          <h4 className='relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-recoleta text-dark-text text-2xl mb-10 px-5 md:px-24'>
             Full Stack Developer
           </h4>
           <section className='relative flex flex-col lg:flex-row px-5 md:px-24'>
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
+              className={`w-full lg:w-1/3 text-dark-text mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
             >
               {" "}
               Some Text
             </p>
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
+              className={`w-full lg:w-1/3 text-dark-text mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
             >
               {" "}
               Some Text
             </p>
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
+              className={`w-full lg:w-1/3 text-dark-text mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
             >
               {" "}
               Some more text

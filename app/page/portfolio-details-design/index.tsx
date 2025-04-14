@@ -43,12 +43,10 @@ function index({ id, data, DataArray }: PortfolioDetailsDesignProps) {
   }, [id, DataArray.length]);
 
   function PushToNext() {
-    // No need to check for negative here since next is always >= 0
     router.push(`/portfoliodetails/${next}`);
   }
 
   function PushToPrev() {
-    // No need to check for negative here since prev is always >= 0
     router.push(`/portfoliodetails/${prev}`);
   }
   return (
@@ -76,11 +74,11 @@ function index({ id, data, DataArray }: PortfolioDetailsDesignProps) {
         <div className={`container m-auto`}>
           <div className={`max-w-[650px] w-[100%] m-auto`}>
             <p
-              className={`opacity-3 sm:text-left text-center font-sans text-[#223740] mb-3`}
+              className={`opacity-3 sm:text-left text-center font-sans text-dark-text mb-3`}
             >
               Project Sample
             </p>
-            <h1 className='opacity-3 text-[#223740] sm:text-left text-center w-full sm:w-3/4 font-recoletaBold text-4x md:text-4xl lg:text-4xl xl:text-4xl'>
+            <h1 className='opacity-3 text-dark-text sm:text-left text-center w-full sm:w-3/4 font-recoletaBold text-4x md:text-4xl lg:text-4xl xl:text-4xl'>
               {data?.title}
             </h1>
           </div>
@@ -112,13 +110,13 @@ function index({ id, data, DataArray }: PortfolioDetailsDesignProps) {
         <div className='col-span-12 lg:col-span-4 lg:px-0 sm:px-20'>
           <div className='mt-10 sm:mt-24 w-full lg:max-w-[300px] lg:px-1 px-3 sticky top-36 pb-14'>
             <h1 className='text-3xl mb-4 text-[#48AFDE]'>{data?.name}</h1>
-            <p className='text-[14px] font-sans mb-4 text-[#223740]'>
+            <p className='text-[14px] font-sans mb-4 text-dark-text'>
               {data?.des}
             </p>
             <p id='highlight' className='my-2 text-dark text-[20px] font-sans'>
               Project Descriptions
             </p>
-            <p className='text-[14px] font-sans mb-4 text-[#223740]'>
+            <p className='text-[14px] font-sans mb-4 text-dark-text'>
               {data?.des1}
             </p>
             <div className='flex flex-wrap'>
@@ -169,7 +167,7 @@ function index({ id, data, DataArray }: PortfolioDetailsDesignProps) {
         >
           <a
             onClick={PushToPrev}
-            className={`flex justify-center group:hover:bg-[#223740] 
+            className={`flex justify-center group:hover:bg-dark-text 
                         cursor-pointer transition-colors duration-300
                         bg-[#405B66] bg-opacity-90 items-center
                         w-full h-full`}
@@ -183,7 +181,7 @@ function index({ id, data, DataArray }: PortfolioDetailsDesignProps) {
           style={{ backgroundImage: `url(${DataArray[next]?.images[0]})` }}
         >
           <a
-            className='flex justify-center group:hover:bg-[#223740] cursor-pointer transition-colors duration-300 bg-[#405B66]  bg-opacity-90 items-center w-full h-full'
+            className='flex justify-center group:hover:bg-dark-text cursor-pointer transition-colors duration-300 bg-[#405B66]  bg-opacity-90 items-center w-full h-full'
             onClick={PushToNext}
           >
             <Next />

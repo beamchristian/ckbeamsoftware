@@ -29,7 +29,7 @@ export default function Footer() {
                 <a
                   target='blank'
                   href='https://www.udemy.com/course/the-ultimate-nextjs13-portfolio-website-responsive/?referralCode=910E0431A13760E0695A'
-                  className='font-sans  cursor-pointer px-10 py-5 bg-[#223740] hover:bg-[#223740] rounded-xl text-white font-medium text-lg'
+                  className='font-sans  cursor-pointer px-10 py-5 bg-dark-text hover:bg-dark-text rounded-xl text-white font-medium text-lg'
                 >
                   Sign Up Now
                 </a>

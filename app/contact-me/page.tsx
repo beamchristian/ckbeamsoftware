@@ -14,13 +14,13 @@ const hind = Hind({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-function ContactMe() {
+async function ContactMe() {
   return (
     <>
       <ToastContainer />
       <div className='flex flex-col items-center justify-center w-full pt-[80px] pb-[80px] mt-4'>
         <div className='flex flex-col items-center justify-center bg-[url("/offices.jpg")] bg-cover bg-center w-full h-[400px]'>
-          <div className='flex flex-col items-center justify-center  w-full h-full bg-[#223740]/70 backdrop-brightness-50'>
+          <div className='flex flex-col items-center justify-center  w-full h-full bg-dark-text/70 backdrop-brightness-50'>
             <div className='text-center bg-[#48AFDE] py-[5px] px-[10px] tracking-wide uppercase font-semibold text-[20px] text-white rounded-lg'>
               <a href='#contact' className='cursor-pointer'>
                 Contact Form
@@ -43,7 +43,7 @@ function ContactMe() {
           <div className='sm:flex gap-[20px] mt-[50px] max-w-[1105px] w-full h-full'>
             <div className='flex flex-col flex-1 xl:flex-row gap-[20px]'>
               <div
-                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white'
+                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
                 style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
               >
                 <div className='flex items-center gap-[15px]'>
@@ -63,7 +63,7 @@ function ContactMe() {
               </div>
 
               <div
-                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white'
+                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
                 style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
               >
                 <div className='flex items-center gap-[15px]'>
@@ -85,7 +85,7 @@ function ContactMe() {
 
             <div className='flex flex-col flex-1 xl:flex-row gap-[20px]'>
               <div
-                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white'
+                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
                 style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
               >
                 <div className='flex items-center gap-[15px]'>
@@ -107,7 +107,7 @@ function ContactMe() {
               </div>
               <Link href='https://github.com/beamchristian'>
                 <div
-                  className='flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-[#223740] hover:text-white hover:-translate-y-4 bg-white'
+                  className='flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
                   style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
                 >
                   <div className='flex items-center gap-[15px]'>
