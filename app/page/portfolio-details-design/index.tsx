@@ -26,7 +26,6 @@ function PortfolioDetailsDesign({
   data,
   DataArray,
 }: PortfolioDetailsDesignProps) {
-  const router = useRouter(); // Hook called inside a valid component now
   const [nextId, setNextId] = useState(0); // Renamed state variable for clarity
   const [prevId, setPrevId] = useState(0); // Renamed state variable for clarity
 

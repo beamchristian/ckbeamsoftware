@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 interface DiagonalDrawerProps {
