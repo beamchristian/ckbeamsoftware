@@ -100,7 +100,7 @@ export const DataArray: PortfolioDataType[] = [
     images: ["/shop-shop.jpg"],
   },
   {
-    title: "An app that helps you find your next book!",
+    title: "Book Search Engine",
     name: "Book Search Engine",
     repo: "https://github.com/beamchristian/book-search-graphql-refactor",
     des: "Book Search Engine is a web application that allows users to find and save books of their interest.",
@@ -118,7 +118,7 @@ export const DataArray: PortfolioDataType[] = [
     images: ["/deep-thoughts.jpg"],
   },
   {
-    title: "A Platformer created with the Unity Game Engine",
+    title: "Platformer game written in c#",
     name: "Leap To Live",
     repo: "https://github.com/beamchristian/Leap-To-Live",
     des: "meticulously crafted using the powerful Unity Game Engine and the versatile programming language, C#.",
