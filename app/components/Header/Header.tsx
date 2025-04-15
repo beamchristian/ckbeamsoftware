@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect, Dispatch, SetStateAction } from "react";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
 import Drawer from "./DiagonalDrawer";
 import "../Header/DiagonalDrawer.css";
 
@@ -53,10 +54,12 @@ function Header() {
                       bg-[#48AFDE] flex justify-center items-center rounded-br-3xl`}
           >
             <div className='relative w-7 lg:w-10 h-7 lg:h-10 flex justify-center items-center'>
-              <img
+              <Image
                 src='/drawer.png'
                 alt='drawer item'
                 className='w-[150px] h-10'
+                width={100}
+                height={100}
               />
             </div>
           </div>

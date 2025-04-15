@@ -2,17 +2,10 @@ import React from "react";
 import { FaLocationDot, FaGithub } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { AiFillMail } from "react-icons/ai";
-import { FaHeadphones } from "react-icons/fa";
-import { Hind } from "next/font/google";
-import { ToastClassName, ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ContactForm from "../components/ContactMe/ContactForm";
 import Link from "next/link";
-
-const hind = Hind({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 async function ContactMe() {
   return (

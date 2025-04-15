@@ -4,7 +4,7 @@ import { company, helping, legal, service } from "@/utils/variables";
 
 export default function Footer() {
   const date = new Date();
-  let currentYear = date.getFullYear();
+  const currentYear = date.getFullYear();
 
   return (
     <div id='footer' className='mt-[5px]'>

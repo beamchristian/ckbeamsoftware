@@ -48,7 +48,7 @@ function Accordian({ title, content }: AccordianProps) {
         leaveFrom='opacity-100'
         leaveTo='opacity-0'
       >
-        {(ref) => (
+        {() => (
           <div ref={divRef} className='p-4 bg-[#232323]'>
             {content.map((item) => (
               <p key={item} className='py-1 text-gray-400 font-sans'>

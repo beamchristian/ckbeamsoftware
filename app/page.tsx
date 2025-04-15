@@ -2,7 +2,6 @@ import { Hind } from "next/font/google";
 import HomeComponent from "./components/HomeComponent/HomeComponent";
 import MySlider from "./components/SliderCard/MySlider";
 import AboutMe from "./components/AboutMe/AboutMe";
-import Testimonial from "./components/Testimonial/Testimonial";
 import CallToAction from "./components/CallToAction/CallToAction";
 
 const hind = Hind({
@@ -49,8 +48,8 @@ export default async function Home() {
               Explore my latest full-stack web development projects, where I
               leverage cutting-edge technologies like Next.js and TypeScript to
               build seamless user experiences. Staying ahead in this dynamic
-              field is a priority, so I'm constantly exploring new frameworks,
-              tools, and best practices.
+              field is a priority, so I&apos;m constantly exploring new
+              frameworks, tools, and best practices.
             </p>
           </div>
           <div

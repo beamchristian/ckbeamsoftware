@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import { SliderItem } from "@/Types/Types";
 import EyeSvg from "./Svg";
@@ -18,10 +19,14 @@ function SliderCard({ item, index }: SliderCardProps): React.JSX.Element {
                      md:w-[450px] sm:w-[300px] w-[300px] relative m-auto`}
       >
         <div className='h-full w-full group cursor-all-scroll z-50 relative'>
-          <img
+          <Image
             src={item.images[0]}
             alt='item thumbnail'
             className='w-full h-[200px] lg:h-[350px] md:h-[300px] max-w-100 rounded-lg'
+            width={0}
+            height={0}
+            sizes='100vw'
+            style={{ width: "100%", height: "80%" }}
           />
           <div
             onClick={() => router.push(`/portfoliodetails/${index}`)}

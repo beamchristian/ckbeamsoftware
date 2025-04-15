@@ -41,7 +41,7 @@ function HomeComponent() {
                     className={`text-dark-text font-recoletaBlack text-5xl md:text-5xl 
                       lg:text-7xl xl:text-7xl mt-5 md:mt-3`}
                   >
-                    I'm Christian
+                    I&apos;m Christian
                   </h1>
                   <h2
                     className={`text-dark-text py-2 font-bold uppercase md:text-xl ${hind.className}`}

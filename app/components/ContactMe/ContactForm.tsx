@@ -1,6 +1,6 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import { ToastClassName, ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Hind } from "next/font/google";
 import { ContactFormDataType } from "@/Types/Types";
@@ -53,7 +53,7 @@ function ContactForm() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission behavior
     setLoading(true);
-    let data = {
+    const data = {
       ...state,
     };
 
