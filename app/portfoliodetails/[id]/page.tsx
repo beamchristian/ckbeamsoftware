@@ -2,14 +2,8 @@ import PortfolioDetailsDesign from "../../page/portfolio-details-design";
 import { DataArray } from "@/app/data";
 import { notFound } from "next/navigation"; // Import for handling invalid IDs
 
-// Define the expected props type for the dynamic route
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-const Portfolio = ({ params }: PageProps) => {
+// eslint-disable-next-line no-use-before-define
+const Portfolio = ({ params }: { params: { id: string } }) => {
   const idNumber = parseInt(params.id, 10); // Specify radix 10
 
   // Check if parsing failed (NaN) or if ID is out of bounds
