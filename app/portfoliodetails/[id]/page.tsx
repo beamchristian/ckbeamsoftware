@@ -2,13 +2,13 @@ import PortfolioDetailsDesign from "../../page/portfolio-details-design";
 import { DataArray } from "@/app/data";
 import { notFound } from "next/navigation"; // Import for handling invalid IDs
 
-// eslint-disable-next-line no-use-before-define
-const Portfolio = ({ params }: { params: { id: string } }) => {
-  const idNumber = parseInt(params.id, 10); // Specify radix 10
+const Portfolio = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const idNumber = parseInt(id, 10);
 
   // Check if parsing failed (NaN) or if ID is out of bounds
   if (isNaN(idNumber) || idNumber < 0 || idNumber >= DataArray.length) {
-    console.warn(`Invalid portfolio ID received: ${params.id}. Returning 404.`);
+    console.warn(`Invalid portfolio ID received: ${id}. Returning 404.`);
     notFound(); // Trigger a 404 page
   }
   const data = DataArray[idNumber];
@@ -20,11 +20,7 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <PortfolioDetailsDesign
-        data={data}
-        id={params.id}
-        DataArray={DataArray}
-      />
+      <PortfolioDetailsDesign data={data} id={id} DataArray={DataArray} />
     </>
   );
 };
