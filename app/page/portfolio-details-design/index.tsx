@@ -1,7 +1,6 @@
 "use client";
 import { PortfolioDataType } from "@/Types/Types";
 import { Hind } from "next/font/google";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Previous from "./previous-svg";
