@@ -70,3 +70,10 @@ html {
     width: 100% !important;
   }
 }
+
+@media (min-width: 1288px) {
+  .headerShow {
+    background-color: #fff;
+    box-shadow: #48afde -1px 25px 50px 10px;
+  }
+}

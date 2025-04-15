@@ -28,7 +28,7 @@ function Header() {
   };
 
   return (
-    <>
+    <React.Fragment>
       <div className={`diagonal-drawer ${isOpen ? "open" : ""}`}>
         <Drawer
           isOpen={isOpen}
@@ -41,10 +41,10 @@ function Header() {
         className={`${
           isScrolled ? "headerShow" : ""
         } w-full fixed top-0 z-50 transition-all duration-500`}
-        style={{
-          backgroundColor: isScrolled ? "#fff" : "transparent",
-          boxShadow: isScrolled ? "#48AFDE -10px 25px 50px 10px" : "",
-        }}
+        // style={{
+        //   backgroundColor: isScrolled ? "#fff" : "transparent",
+        //   boxShadow: isScrolled ? "#48AFDE -10px 25px 50px 10px" : "",
+        // }}
       >
         <div className='relative'>
           <div
@@ -164,7 +164,7 @@ function Header() {
           </ul>
         </nav>
       </header>
-    </>
+    </React.Fragment>
   );
 }
 

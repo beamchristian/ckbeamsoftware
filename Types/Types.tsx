@@ -23,3 +23,12 @@ export interface AboutDataType {
   img: string;
   array: string[];
 }
+
+// Define an interface for the form state for better type safety
+export interface ContactFormDataType {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  subject: string;
+  message: string;
+}

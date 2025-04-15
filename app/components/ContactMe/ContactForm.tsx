@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { ToastClassName, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Hind } from "next/font/google";
+import { ContactFormDataType } from "@/Types/Types";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -10,7 +11,7 @@ const hind = Hind({
 });
 
 function ContactForm() {
-  const [state, setState] = useState({
+  const [state, setState] = useState<ContactFormDataType>({
     name: "",
     email: "",
     phoneNumber: "",
@@ -20,7 +21,9 @@ function ContactForm() {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const key = e.target.name;
     const value = e.target.value;
     console.log(`key: ${key}, value: ${value}`);
@@ -30,7 +33,7 @@ function ContactForm() {
     });
   };
 
-  const handlePhoneChange = (e) => {
+  const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     const numericValue = value.replace(/[^0-9]/g, "");
     setState({ ...state, phoneNumber: numericValue });
@@ -46,36 +49,44 @@ function ContactForm() {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // Type 'e' as a FormEvent targeting the Form element
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent default form submission behavior
     setLoading(true);
     let data = {
       ...state,
     };
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then(async (res) => {
-        setLoading(false);
-        const response = await res.json();
-        if (!response.error) {
-          clearState();
-          toast(response.message);
-        } else {
-          clearState();
-          toast("something went wrong");
-        }
-      })
-      .catch((e) => {
-        setLoading(false);
-        clearState();
-        toast("something went wrong");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+
+      const response = await res.json();
+
+      if (res.ok && !response.error) {
+        // Check if the fetch itself was successful (status 2xx)
+        clearState();
+        toast.success(response.message || "Message sent successfully!"); // Use toast.success for success
+      } else {
+        // Handle specific API errors or fallback
+        clearState();
+        toast.error(
+          response.message || "Something went wrong sending the message."
+        ); // Use toast.error for errors
+      }
+    } catch (error) {
+      console.error("Fetch error:", error); // Log the actual error
+      clearState();
+      toast.error("An unexpected error occurred. Please try again."); // Use toast.error for errors
+    } finally {
+      setLoading(false); // Ensure loading is set to false whether success or error
+    }
   };
 
   return (

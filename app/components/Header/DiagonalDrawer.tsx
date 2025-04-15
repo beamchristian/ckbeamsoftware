@@ -20,7 +20,7 @@ function DiagonalDrawer({
     <>
       <div className='relative'>
         <div
-          className={`z-50 ${pathname === "/" ? "top-[0px]" : "top-[100px]"} 
+          className={`z-50 ${pathname === "/" ? "top-[0px]" : "top-0"} 
           cursor-pointer fixed w-14 h-14 lg:h-24 lg:w-24 bg-[#48AFDE] 
           flex justify-center items-center rounded-br-3xl`}
         >
@@ -65,7 +65,7 @@ function DiagonalDrawer({
 
       <header
         className={`fixed w-full transition-all duration-500 z-40 ${
-          pathname === "/" ? "top-0" : "top-[-98px]"
+          pathname === "/" ? "top-0" : "top-0"
         }`}
       >
         <div className='relative'>
@@ -154,7 +154,7 @@ function DiagonalDrawer({
                 <li className={`group my-4 xl:my-4 2xl:my-6 relative`}>
                   <div className={`inline-block relative`}>
                     <a
-                      href='/#contact-me'
+                      href='/contact-me'
                       onClick={() => {
                         setSelectedIndex1(3);
                         setIsOpen(false);
