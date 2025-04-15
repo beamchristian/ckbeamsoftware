@@ -2,7 +2,13 @@ import PortfolioDetailsDesign from "../../page/portfolio-details-design";
 import { DataArray } from "@/app/data";
 import { notFound } from "next/navigation"; // Import for handling invalid IDs
 
-const Portfolio = async ({ params }: { params: { id: string } }) => {
+type PortfolioPageProps = {
+  params: {
+    id: string;
+  };
+};
+
+const Portfolio = async ({ params }: PortfolioPageProps) => {
   const idNumber = parseInt(params.id, 10); // Specify radix 10
 
   // Check if parsing failed (NaN) or if ID is out of bounds
