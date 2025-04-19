@@ -15,14 +15,7 @@ const hind = Hind({
 function Testimonial() {
   return (
     <div id='testimonial '>
-      <div
-        className='bg-[#E0F3FB] max-h-[450px] py-12 lg:px-12 md:px-5 px-3 rounded-lg hidden md:block '
-        style={{
-          backgroundImage:
-            "linear-gradient(-62deg, #EEF7FB 0 50%, #EEF7FB 0% 100%)",
-          width: "100%",
-        }}
-      >
+      <div className='bg-[linear-gradient(-62deg,#EEF7FB_0%_50%,#EEF7FB_0%_100%)] max-h-[450px] py-12 lg:px-12 md:px-5 px-3 rounded-lg hidden md:block '>
         <div className='lg:container mx-auto   px-0 sm:max-h-[350px]'>
           <div className='text-center'>
             <h2 className='font-extrabold text-5xl mb-6 text-[#48AEDD]'>

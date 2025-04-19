@@ -14,13 +14,13 @@ async function ContactMe() {
       <div className='flex flex-col items-center justify-center w-full pt-[80px] pb-[80px] mt-4'>
         <div className='flex flex-col items-center justify-center bg-[url("/offices.jpg")] bg-cover bg-center w-full h-[400px]'>
           <div className='flex flex-col items-center justify-center  w-full h-full bg-dark-text/70 backdrop-brightness-50'>
-            <div className='text-center bg-[#48AFDE] py-[5px] px-[10px] tracking-wide uppercase font-semibold text-[20px] text-white rounded-lg'>
+            <div className='text-center bg-brand-light py-[5px] px-[10px] tracking-wide uppercase font-semibold text-[20px] text-white rounded-lg'>
               <a href='#contact' className='cursor-pointer'>
                 Contact Form
               </a>
             </div>
             <div className='mt-[10px]'>
-              <h1 className='recoletaBold text-5xl text-[#48AFDE] p-2 text-center tracking-wide'>
+              <h1 className='recoletaBold text-5xl text-brand-light p-2 text-center tracking-wide'>
                 Hire Me
               </h1>
             </div>
@@ -35,10 +35,7 @@ async function ContactMe() {
         <div className='px-[20px]'>
           <div className='sm:flex gap-[20px] mt-[50px] max-w-[1105px] w-full h-full'>
             <div className='flex flex-col flex-1 xl:flex-row gap-[20px]'>
-              <div
-                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
-                style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
-              >
+              <div className='shadow-[-1px_1px_10px_0px_theme(colors.brand.light)] flex flex-col justify-center py-[35px] px-[45px] rounded-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'>
                 <div className='flex items-center gap-[15px]'>
                   <div>
                     <FaLocationDot size={40} color='#48AFDE' />
@@ -55,10 +52,7 @@ async function ContactMe() {
                 </div>
               </div>
 
-              <div
-                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
-                style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
-              >
+              <div className='shadow-[-1px_1px_10px_0px_theme(colors.brand.light)] flex flex-col justify-center py-[35px] px-[45px] rounded-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'>
                 <div className='flex items-center gap-[15px]'>
                   <div>
                     <FiPhoneCall size={40} color='#48AFDE' />
@@ -77,10 +71,7 @@ async function ContactMe() {
             </div>
 
             <div className='flex flex-col flex-1 xl:flex-row gap-[20px]'>
-              <div
-                className='flex flex-col justify-center py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
-                style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
-              >
+              <div className='shadow-[-1px_1px_10px_0px_theme(colors.brand.light)] flex flex-col justify-center py-[35px] px-[45px] rounded-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'>
                 <div className='flex items-center gap-[15px]'>
                   <div>
                     <AiFillMail size={40} color='#48AFDE' />
@@ -99,10 +90,7 @@ async function ContactMe() {
                 </div>
               </div>
               <Link href='https://github.com/beamchristian'>
-                <div
-                  className='flex flex-col py-[35px] px-[45px] rounded-lg shadow-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'
-                  style={{ boxShadow: "#48AFDE -1px 1px 10px 0px" }}
-                >
+                <div className='shadow-[-1px_1px_10px_0px_theme(colors.brand.light)] flex flex-col py-[35px] px-[45px] rounded-lg cursor-pointer transition-all transform duration-300 hover:bg-dark-text hover:text-white hover:-translate-y-4 bg-white'>
                   <div className='flex items-center gap-[15px]'>
                     <div>
                       <FaGithub size={40} color='#48AFDE' />
@@ -133,7 +121,7 @@ async function ContactMe() {
             Contact Us
           </div>
           <div className=''>
-            <p className='text-[30px] text-[#48AFDE]'>
+            <p className='text-[30px] text-brand-light'>
               {" "}
               Request A Call Back ! Feel Free To Reach & Contact Us.
             </p>

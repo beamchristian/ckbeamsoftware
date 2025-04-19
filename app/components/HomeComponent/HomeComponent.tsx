@@ -18,14 +18,7 @@ function HomeComponent() {
     <>
       <div
         id='home'
-        style={{
-          backgroundImage:
-            "linear-gradient(62deg, #EEF7FB 0 50%, #48AFDE 0% 100%)",
-          minHeight: "500px",
-          maxHeight: "1200px",
-          height: "100%",
-          width: "100%",
-        }}
+        className='bg-gradient-to-br from-[#48AFDE] via-light-bg to-[#48AFDE] min-h-[500px] max-h-[1200px] w-full h-full'
       >
         <div className='container m-auto'>
           <div className='grid grid-cols-12'>
@@ -62,7 +55,7 @@ function HomeComponent() {
                     download='CHRISTIAN_BEAM_Resume.pdf'
                     className={`ml-10 cursor-pointer inline-block bg-dark-text transition-all duration-300 
                                 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase 
-                                md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#47AEDE] 
+                                md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-brand 
                                 hover:show-lg transform hover:translate-y-1 ${hind.className}`}
                   >
                     My Resume

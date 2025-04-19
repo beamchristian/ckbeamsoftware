@@ -35,24 +35,21 @@ function SliderCard({ item, index }: SliderCardProps): React.JSX.Element {
                         left-6 rounded-lg transition
                         lg:opacity-0 md:opacity-0
                         duration-300 group-hover:opacity-100
-                        bg-[#47626D] cursor-pointer
+                        bg-dark-text-2 cursor-pointer
                         flex items-center justify-center
                         shadow-accent-color hover:shadow-xl
-                        hover:bg-[#47626D] w-10 h-10
+                        hover:bg-dark-text-2 w-10 h-10
                         md:w-12 md:h-12 md:bottom-32
                         lg:w-20 lg:h-20 lg:bottom-44
+                        shadow-[-10px_10px_20px_10px_theme(colors.brand.light)]
                         `}
-            style={{ boxShadow: "#48AFDE -10px 10px 20px 10px" }}
           >
             <EyeSvg />
           </div>
         </div>
-        <div
-          className='absolute top-14 sm:left-12 rounded-lg bg-white h-[200px] lg:h-[350px] md:h-[300px] w-full'
-          style={{ boxShadow: "#48AFDE -10px 10px 20px 10px" }}
-        >
+        <div className='shadow-[-10px_10px_20px_10px_theme(colors.brand.light)] absolute top-14 sm:left-12 rounded-lg bg-white h-[200px] lg:h-[350px] md:h-[300px] w-full'>
           <div className='relative h-[200px] lg:h-[350px] md:h-[300px] w-[100%]'>
-            <p className='absolute bottom-3 left-4 text-lg front-[300]'>
+            <p className='absolute bottom-1 ml-4 text-lg front-[300]'>
               {item.title}
             </p>
           </div>

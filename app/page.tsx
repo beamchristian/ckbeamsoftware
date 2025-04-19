@@ -13,37 +13,25 @@ export default async function Home() {
   return (
     <main className='min-h-screen relative'>
       <HomeComponent />
-      <div
-        id='portfolio'
-        className='mt-0 pt-5 -mb-40'
-        style={{
-          backgroundImage:
-            "linear-gradient(-62deg, #EEF7FB 0 45%, white 0% 100%)",
-          width: "100%",
-        }}
-      >
+      <div id='portfolio' className='bg-light-bg w-full mt-0 pt-5'>
         <div className={`container m-auto`}>
           <p
             style={{
               transform: "translate(0px, -20px)",
             }}
-            className='text-[300px] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden'
+            className='lg:text-[10rem] md:text-[8rem] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden'
           >
             portfolio
           </p>
-          <div
-            style={{
-              transform: "translate(0px, -250px)",
-            }}
-          >
+          <div>
             <p
-              className={`text-[#48AFDE] md:pl-[80px] px-5 font-extrabold text-5xl`}
+              className={`text-brand-light md:pl-[80px] px-5 font-extrabold text-5xl`}
             >
               Recent Works
             </p>
             <p
               className={`max-w-2xl md:pl-[80px] px-5 text-[1.2rem]
-                           text-[#47626D] leading-8 mt-5 ${hind.className}`}
+                           text-dark-text-2 mb-8 leading-8 mt-5 ${hind.className}`}
             >
               Explore my latest full-stack web development projects, where I
               leverage cutting-edge technologies like Next.js and TypeScript to
@@ -52,11 +40,7 @@ export default async function Home() {
               frameworks, tools, and best practices.
             </p>
           </div>
-          <div
-            style={{
-              transform: "translate(0px, -10.6rem)",
-            }}
-          >
+          <div className='lg:mb-10 md:mb-10 bg-light-bg'>
             <MySlider />
           </div>
         </div>

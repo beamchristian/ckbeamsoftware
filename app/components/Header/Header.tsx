@@ -44,14 +44,14 @@ function Header() {
         } w-full fixed top-0 z-50 transition-all duration-500`}
         // style={{
         //   backgroundColor: isScrolled ? "#fff" : "transparent",
-        //   boxShadow: isScrolled ? "#48AFDE -10px 25px 50px 10px" : "",
+        //   boxShadow: isScrolled ? "brand-light -10px 25px 50px 10px" : "",
         // }}
       >
         <div className='relative'>
           <div
             onClick={openDrawer}
             className={`z-30 absolute cursor-pointer w-14 h-14 lg:w-24 lg:h-24 
-                      bg-[#48AFDE] flex justify-center items-center rounded-br-3xl`}
+                      bg-brand-light flex justify-center items-center rounded-br-3xl`}
           >
             <div className='relative w-7 lg:w-10 h-7 lg:h-10 flex justify-center items-center'>
               <Image

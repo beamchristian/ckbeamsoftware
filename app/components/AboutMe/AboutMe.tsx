@@ -51,13 +51,13 @@ function AboutMe() {
     <>
       <div
         id='about-me-component'
-        className='bg-[#E0F3FD] pt-[250px] mt-4  pb-[100px] lg:pb-[600px] relative lg:h-[800px]'
+        className='bg-[#E0F3FD] pt-[250px] pb-[100px] lg:pb-[600px] relative lg:h-[800px]'
       >
         <div className='container m-auto'>
           <h1 className='text-[240px] w-[80%] overflow-hidden absolute lg:left-40 md:left-30 top-[-50px]  text-[#EAF7FC]'>
             About Me
           </h1>
-          <h1 className='relative font-recoletaBlack text-5xl  text-[#48AFDE] mb-5 -mt-40  md:px-24 px-5'>
+          <h1 className='relative font-recoletaBlack text-5xl text-brand-light mb-5 -mt-40  md:px-24 px-5'>
             About My Self
           </h1>
           <h4 className='relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-recoleta text-dark-text text-2xl mb-10 px-5 md:px-24'>
@@ -88,7 +88,7 @@ function AboutMe() {
 
       <div
         style={{
-          backgroundImage: "linear-gradient(45deg, #EAF7FC  70%,#48AFDE 30%)",
+          backgroundImage: "linear-gradient(45deg, #EAF7FC 70%, #48AFDE 30%)",
           width: "100%",
         }}
         className='lg:-mt-60'
@@ -100,11 +100,10 @@ function AboutMe() {
                 <a
                   key={index}
                   onClick={() => handleCardClick(item, index)}
-                  style={{ boxShadow: "#48AFDE -5px  10px 20px 0px" }}
-                  className={`relative cursor-pointer transition-all transform duration-300 group rounded-xl center p-6 lg:p-10 flex flex-col justify-center  items-center ${
+                  className={`shadow-[-5px_10px_20px_0px_theme(colors.brand.light)] relative cursor-pointer transition-all transform duration-300 group rounded-xl center p-6 lg:p-10 flex flex-col justify-center  items-center ${
                     selectedIndex == index
-                      ? " -translate-y-2 bg-[#476571]"
-                      : "hover:bg-[#476571] hover:shadow-xl hover:-translate-y-2 bg-white"
+                      ? " -translate-y-2 bg-dark-bg"
+                      : "hover:bg-dark-bg hover:shadow-xl hover:-translate-y-2 bg-white"
                   }`}
                 >
                   <div className='w-16 h-16 sm:w-10 sm:h-10 lg:w-16 lg:h-16'>
@@ -116,7 +115,7 @@ function AboutMe() {
                     />
                   </div>
                   <h4
-                    className={`text-center text-sm lg:text-xl font-recoletaBold transition-colors duration-500 group-hover:text-white text-[#47626D] mt-3 ${
+                    className={`text-center text-sm lg:text-xl font-recoletaBold transition-colors duration-500 group-hover:text-white text-dark-text-2 mt-3 ${
                       selectedIndex === index ? "text-white" : ""
                     }`}
                   >
@@ -124,7 +123,7 @@ function AboutMe() {
                   </h4>
 
                   <div
-                    className={`absolute -top-2 -right-2 transform transition-all duration-500 opacity-0 group-hover:opacity-100 shadow-xl w-12 h-12 rounded-lg bg-[#476571] flex justify-center items-center font-bold text-white font-recoletaBold text-xl  ${
+                    className={`absolute -top-2 -right-2 transform transition-all duration-500 opacity-0 group-hover:opacity-100 shadow-xl w-12 h-12 rounded-lg bg-dark-bg flex justify-center items-center font-bold text-white font-recoletaBold text-xl  ${
                       selectedIndex === index
                         ? "opacity-100 rotate-12"
                         : "group-hover:rotate-12"
@@ -144,16 +143,16 @@ function AboutMe() {
                 }`}
               >
                 <p
-                  className={`text-[#47626D] ${hind.className} text-lg sm:text-base lg:text-xl transition duration-500 transform opacity-100 undefined undefined`}
+                  className={`text-dark-text-2 ${hind.className} text-lg sm:text-base lg:text-xl transition duration-500 transform opacity-100 undefined undefined`}
                 >
                   My skills as
                 </p>
-                <h2 className='font-recoletaBold text-[#47626D] text-3xl sm:text-2xl md:text-3xl mb-6 w-44 md:w-56 transition duration-500 transform opacity-100 undefined undefined'>
+                <h2 className='font-recoletaBold text-dark-text-2 text-3xl sm:text-2xl md:text-3xl mb-6 w-44 md:w-56 transition duration-500 transform opacity-100 undefined undefined'>
                   {mapData?.title}
                 </h2>
 
                 <ul
-                  className={`${hind.className} font-[300] list-disc text-[#47626D] ml-8 lg:ml-10 text-base lg:text-lg transition duration-500 transform  opacity-100 undefined undefined`}
+                  className={`${hind.className} font-[300] list-disc text-dark-text-2 ml-8 lg:ml-10 text-base lg:text-lg transition duration-500 transform  opacity-100 undefined undefined`}
                 >
                   {mapData?.array?.map((obj) => (
                     <li key={obj} className='mb-2'>
@@ -168,7 +167,7 @@ function AboutMe() {
                 }`}
               >
                 <div className='card-inner'>
-                  <div className='rounded-2xl cursor-pointer  text-7xl  xl:text-9xl font-recoletaBlack text-white bg-[#47626D] p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48  transform transition duration-500 transform-preserve -rotate-6 transform-preserve'>
+                  <div className='rounded-2xl cursor-pointer  text-7xl  xl:text-9xl font-recoletaBlack text-white bg-dark-text-2 p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48  transform transition duration-500 transform-preserve -rotate-6 transform-preserve'>
                     <span className='text-2xl xl:text-6xl mr-2 sm:mr-3'>*</span>
                     {mapData.count}
                   </div>
@@ -178,7 +177,7 @@ function AboutMe() {
               <div className='absolute right-10 -bottom-5 flex'>
                 <a
                   onClick={HandlePrev}
-                  className='w-12 h-12 rounded-xl mr-1 transform transition duration-500 cursor-pointer hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#47626D]'
+                  className='w-12 h-12 rounded-xl mr-1 transform transition duration-500 cursor-pointer hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-dark-text-2'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -198,7 +197,7 @@ function AboutMe() {
                 </a>
                 <a
                   onClick={HandleNext}
-                  className='w-12 h-12 rounded-xl mr-1 transform transition duration-500 cursor-pointer hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#47626D]'
+                  className='w-12 h-12 rounded-xl mr-1 transform transition duration-500 cursor-pointer hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-dark-text-2'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
