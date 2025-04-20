@@ -18,7 +18,7 @@ function HomeComponent() {
     <>
       <div
         id='home'
-        className='bg-gradient-to-br from-[#48AFDE] via-light-bg to-[#48AFDE] min-h-[500px] max-h-[1200px] w-full h-full'
+        className='bg-gradient-to-b from-brand-light to-light-bg min-h-[500px] max-h-[1200px] w-full h-full'
       >
         <div className='container m-auto'>
           <div className='grid grid-cols-12'>
@@ -96,10 +96,10 @@ function HomeComponent() {
                     <Image
                       height={8}
                       width={50}
-                      src='/mongodb.png'
+                      src='/slider-assets/python-logo.png'
                       sizes='100vw'
                       alt=''
-                      className='h-12 cursor-pointer '
+                      className='h-12 cursor-pointer mt-1.5'
                     />
                     <Image
                       height={8}

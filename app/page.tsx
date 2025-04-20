@@ -13,15 +13,13 @@ export default async function Home() {
   return (
     <main className='min-h-screen relative'>
       <HomeComponent />
-      <div id='portfolio' className='bg-light-bg w-full mt-0 pt-5'>
+      <div
+        id='portfolio'
+        className='bg-gradient-to-t from-brand-light to-light-bg w-full mt-0 pt-5'
+      >
         <div className={`container m-auto`}>
-          <p
-            style={{
-              transform: "translate(0px, -20px)",
-            }}
-            className='lg:text-[10rem] md:text-[8rem] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden'
-          >
-            portfolio
+          <p className='lg:text-[10rem] mt-8 md:text-[8rem] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden'>
+            Portfolio
           </p>
           <div>
             <p
@@ -40,7 +38,7 @@ export default async function Home() {
               frameworks, tools, and best practices.
             </p>
           </div>
-          <div className='lg:mb-10 md:mb-10 bg-light-bg'>
+          <div className='bg-light-bg slick-slider'>
             <MySlider />
           </div>
         </div>

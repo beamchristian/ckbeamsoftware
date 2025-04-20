@@ -45,6 +45,22 @@ html {
   backdrop-filter: blur(4px);
 }
 
+.slick-slider {
+  border-radius: 15px;
+}
+
+button.slick-prev::before {
+  font-size: 30px;
+  right: 25px;
+  position: relative;
+}
+
+button.slick-next::before {
+  font-size: 30px;
+  left: 15px;
+  position: relative;
+}
+
 @media screen and (max-width: 900px) {
   .ground-color-change {
     background: linear-gradient(

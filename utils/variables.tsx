@@ -3,7 +3,7 @@ export const carouselSettings = {
   slidesToShow: 6,
   slidesToScroll: 1,
   speed: 2000,
-  arrows: false,
+  arrows: true,
   autoplay: true,
   autoplaySpeed: 2000,
   loop: true,
@@ -87,10 +87,10 @@ export const MySliderSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   speed: 500,
-  arrows: false,
+  arrows: true,
   centerMode: true,
   centerPadding: "400px",
-  dots: true,
+
   responsive: [
     {
       breakpoint: 1700,
@@ -98,7 +98,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "400px",
       },
     },
@@ -108,7 +108,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "350px",
       },
     },
@@ -118,7 +118,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "300px",
       },
     },
@@ -128,7 +128,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "250px",
       },
     },
@@ -138,7 +138,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "200px",
       },
     },
@@ -148,7 +148,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "170px",
       },
     },
@@ -158,7 +158,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "230px",
       },
     },
@@ -168,7 +168,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "200px",
       },
     },
@@ -178,7 +178,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "170px",
       },
     },
@@ -188,7 +188,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "130px",
       },
     },
@@ -198,7 +198,6 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
         centerPadding: "100px",
       },
     },
@@ -208,7 +207,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+
         centerPadding: "170px",
       },
     },
@@ -231,7 +230,7 @@ export const TestimonialSettings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   speed: 2000,
-  arrows: false,
+  arrows: true,
   autoplay: false,
   centerMode: true,
   centerPadding: "10px",

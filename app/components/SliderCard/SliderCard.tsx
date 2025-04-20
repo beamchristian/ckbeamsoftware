@@ -47,7 +47,7 @@ function SliderCard({ item, index }: SliderCardProps): React.JSX.Element {
             <EyeSvg />
           </div>
         </div>
-        <div className='shadow-[-10px_10px_20px_10px_theme(colors.brand.light)] absolute top-14 sm:left-12 rounded-lg bg-white h-[200px] lg:h-[350px] md:h-[300px] w-full'>
+        <div className='shadow-[0px_0px_40px_0px_theme(colors.brand.light)] absolute top-14 sm:left-12 rounded-lg bg-white h-[200px] lg:h-[350px] md:h-[300px] w-full'>
           <div className='relative h-[200px] lg:h-[350px] md:h-[300px] w-[100%]'>
             <p className='absolute bottom-1 ml-4 text-lg front-[300]'>
               {item.title}
