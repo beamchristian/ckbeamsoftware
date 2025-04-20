@@ -89,7 +89,7 @@ function AboutMe() {
               My focus is on the full stack – creating user experiences that
               feel intuitive and seamless, backed by powerful, harmoniously
               built systems on the back end. Always looking for the next
-              interesting project, let's connect!
+              interesting project, let&apos;s connect!
             </p>
           </section>
         </div>
