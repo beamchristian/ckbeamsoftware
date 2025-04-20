@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = date.getFullYear();
 
   return (
-    <div id='footer' className='mt-[5px]'>
+    <div id='footer'>
       <footer className='bg-[#232323]'>
         <div className='mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8'>
           <div className='container mx-auto p-4 md:hidden block mt-10'>
@@ -107,7 +107,7 @@ export default function Footer() {
                 <a
                   className='group flex flex-col items-center justify-center'
                   target='_blank'
-                  href='Linkedin'
+                  href='https://www.linkedin.com/in/christian-beam-64b5b5a0/'
                 >
                   {" "}
                   <svg
@@ -130,8 +130,7 @@ export default function Footer() {
               <div className='w-1/3 sm:w-auto sm:mx-4 mb-10 sm:mb-0'>
                 <a
                   className='group flex flex-col items-center justify-center'
-                  target='_blank'
-                  href='Gmail'
+                  href='mailto:ckbeamsoftware@gmail.com'
                 >
                   <svg
                     stroke='currentColor'

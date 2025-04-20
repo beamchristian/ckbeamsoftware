@@ -81,6 +81,20 @@ button.slick-next::before {
   .my-slider {
     width: 100% !important;
   }
+
+  button.slick-prev::before {
+    font-size: 30px;
+    left: 35px;
+    position: relative;
+    z-index: 1;
+  }
+
+  button.slick-next::before {
+    font-size: 30px;
+    right: 45px;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 @media (min-width: 1288px) {

@@ -18,12 +18,12 @@ export default async function Home() {
         className='bg-gradient-to-t from-brand-light to-light-bg w-full mt-0 pt-5'
       >
         <div className={`container m-auto`}>
-          <p className='lg:text-[10rem] mt-8 md:text-[8rem] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden'>
+          <p className='text-[2rem] lg:text-[10rem] mt-8 md:text-[8rem] text-[#F7FBFD] md:pl-[50px] px-5 max-w-[750px] w-[100%] overflow-hidden'>
             Portfolio
           </p>
           <div>
             <p
-              className={`text-brand-light md:pl-[80px] px-5 font-extrabold text-5xl`}
+              className={`text-brand-light md:pl-[80px] px-5 font-extrabold text-lg md:text-5xl`}
             >
               Recent Works
             </p>

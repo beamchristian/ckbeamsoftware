@@ -217,6 +217,7 @@ export const MySliderSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
+        arrows: true,
         dots: false,
         centerMode: false,
         centerPadding: "0",
