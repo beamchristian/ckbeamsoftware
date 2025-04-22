@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const poppins = localFont({
   src: [
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={poppins.className}>
         {" "}
+        <ToastContainer />
         <Header />
         {children}
         <Footer />

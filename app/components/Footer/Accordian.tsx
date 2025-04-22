@@ -15,13 +15,13 @@ function Accordian({ title, content }: AccordianProps) {
     setIsoOpen(!isOpen);
   };
   return (
-    <div className='border-b border-[#232323] mb-4'>
+    <div className='border-b border-dark-gray mb-4'>
       <div
-        className='flex justify-between items-center p-2 sm:p-4 w-full bg-[#232323]'
+        className='flex justify-between items-center p-2 sm:p-4 w-full bg-dark-gray'
         onClick={toggleAccordina}
       >
         <h2 className='text-2xl text-white font-semibold'>{title}</h2>
-        <div className='bg-[#232323] h-8 w-8 flex justify-center items-center rounded-full'>
+        <div className='bg-dark-gray h-8 w-8 flex justify-center items-center rounded-full'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -49,7 +49,7 @@ function Accordian({ title, content }: AccordianProps) {
         leaveTo='opacity-0'
       >
         {() => (
-          <div ref={divRef} className='p-4 bg-[#232323]'>
+          <div ref={divRef} className='p-4 bg-dark-gray'>
             {content.map((item) => (
               <p key={item} className='py-1 text-gray-400 font-sans'>
                 {item}

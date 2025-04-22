@@ -132,7 +132,7 @@ function PortfolioDetailsDesign({
         {/* Sidebar Info */}
         <div className='col-span-12 lg:col-span-4 lg:px-0 sm:px-20'>
           <div className='mt-10 sm:mt-24 w-full lg:max-w-[300px] lg:px-1 px-3 sticky top-36 pb-14'>
-            <h1 className='text-3xl mb-4 text-brand-light'>{data?.name}</h1>
+            <h1 className='text-3xl mb-4 text-primary'>{data?.name}</h1>
             <p className='text-[14px] font-sans mb-4 text-dark-text'>
               {data?.des}
             </p>
@@ -146,17 +146,17 @@ function PortfolioDetailsDesign({
             <div className='flex flex-wrap'>
               {/* Consider mapping these from data if they vary per project */}
               <span
-                className={`mr-5 text-[14px] bg-[#63C5F1] lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-[#6A787D]`}
+                className={`mr-5 text-[14px] bg-skill-border lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-portfolio-detail-text`}
               >
                 UI/UX Design
               </span>
               <span
-                className={`mr-5 text-[14px] bg-[#63C5F1] lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-[#6A787D]`}
+                className={`mr-5 text-[14px] bg-skill-border lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-portfolio-detail-text`}
               >
                 Next.js
               </span>
               <span
-                className={`mr-5 text-[14px] bg-[#63C5F1] lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-[#6A787D]`}
+                className={`mr-5 text-[14px] bg-skill-border lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-portfolio-detail-text`}
               >
                 React.js
               </span>
@@ -178,7 +178,7 @@ function PortfolioDetailsDesign({
           <div // Inner div for background overlay and hover effect
             className={`flex justify-center items-center group-hover:bg-dark-text
                         cursor-pointer transition-colors duration-300
-                        bg-[#405B66] bg-opacity-90
+                        bg-hover-light bg-opacity-90
                         w-full h-full`}
           >
             <Previous />
@@ -196,7 +196,7 @@ function PortfolioDetailsDesign({
           <div // Inner div for background overlay and hover effect
             className='flex justify-center items-center group-hover:bg-dark-text
                         cursor-pointer transition-colors duration-300
-                        bg-[#405B66] bg-opacity-90
+                        bg-hover-light bg-opacity-90
                         w-full h-full'
           >
             <Next />

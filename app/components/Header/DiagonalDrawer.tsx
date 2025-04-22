@@ -21,7 +21,7 @@ function DiagonalDrawer({
       <div className='relative'>
         <div
           className={`z-50 ${pathname === "/" ? "top-[0px]" : "top-0"} 
-          cursor-pointer fixed w-14 h-14 lg:h-24 lg:w-24 bg-brand-light 
+          cursor-pointer fixed w-14 h-14 lg:h-24 lg:w-24 bg-primary 
           flex justify-center items-center rounded-br-3xl`}
         >
           <div
@@ -92,13 +92,13 @@ function DiagonalDrawer({
                     </Link>
                     {selectedIndex1 === 0 ? (
                       <div
-                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                       ></div>
                     ) : (
                       ""
                     )}
                     <div
-                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                     ></div>
                   </div>
                 </li>
@@ -116,13 +116,13 @@ function DiagonalDrawer({
                     </Link>
                     {selectedIndex1 === 1 ? (
                       <div
-                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                       ></div>
                     ) : (
                       ""
                     )}
                     <div
-                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                     ></div>
                   </div>
                 </li>
@@ -140,13 +140,13 @@ function DiagonalDrawer({
                     </Link>
                     {selectedIndex1 === 2 ? (
                       <div
-                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                       ></div>
                     ) : (
                       ""
                     )}
                     <div
-                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                     ></div>
                   </div>
                 </li>
@@ -164,11 +164,11 @@ function DiagonalDrawer({
                     </Link>
                     {selectedIndex1 === 3 ? (
                       <div
-                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                       ></div>
                     ) : null}
                     <div
-                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-brand-light rounded-xl -z-10`}
+                      className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-primary rounded-xl -z-10`}
                     ></div>
                   </div>
                 </li>
@@ -180,7 +180,7 @@ function DiagonalDrawer({
                                  lg:right-0 h-auto sm:h-full lg:h-auto`}
             >
               <h3
-                className={`block sm:hidden lg:block front-bold text-brand-light text-2xl uppercase mb-5`}
+                className={`block sm:hidden lg:block front-bold text-primary text-2xl uppercase mb-5`}
               >
                 Connect With Me
               </h3>

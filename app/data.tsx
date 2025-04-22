@@ -13,6 +13,7 @@ export const AboutData = [
       "HTML",
       "CSS / Tailwind",
       "C#",
+      "PHP",
     ],
   },
   {
@@ -44,7 +45,6 @@ export const AboutData = [
     title: "CMS and Headless CMS",
     img: "/fifth.svg",
     array: [
-      "PHP",
       "Contentful",
       "Strapi",
       "WordPress Theme Development",

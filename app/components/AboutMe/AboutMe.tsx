@@ -51,16 +51,16 @@ function AboutMe() {
     <>
       <div
         id='about-me-component'
-        className=' bg-gradient-to-b from-brand-light to-light-bg pt-[160px] md:pt-[260px] pb-[100px] lg:pb-[700px] relative lg:h-[800px]'
+        className=' bg-gradient-to-b from-primary to-light-bg pt-[160px] md:pt-[260px] pb-[100px] lg:pb-[700px] relative lg:h-[800px]'
       >
         <div className='container m-auto'>
           <h1
             className={`pt-8 text-[4rem] md:text-[6rem] lg:text-[8rem] pl-[5%] w-[80%] overflow-hidden 
-                        absolute top-1 text-[#EAF7FC]`}
+                        absolute top-1 text-off-white-2`}
           >
             About Me
           </h1>
-          <h1 className='relative font-recoletaBlack text-3xl lg:text-5xl mt-[-2rem] text-brand-light mb-5 md:px-24 px-5'>
+          <h1 className='relative font-extrabold font-recoletaBlack text-3xl md:text-5xl mt-[-2rem] text-primary mb-5 md:px-24 px-5'>
             About My Self
           </h1>
           <h4 className='relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-recoleta text-dark-text text-2xl mb-10 px-5 md:px-24'>
@@ -95,7 +95,7 @@ function AboutMe() {
         </div>
       </div>
 
-      <div className='lg:-mt-60 bg-gradient-to-t from-brand-light to-light-bg'>
+      <div className='lg:-mt-60 bg-gradient-to-t from-primary to-light-bg'>
         <section className='container flex flex-col m-auto sm:flex-row px-5 md:px-24 mt-[50px] sm:mt-0 transform translate-y-[-100px]'>
           <div className=' hidden sm:flex w-full sm:w-1/2 lg:w-7/12'>
             <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-6 mr-0 lg:mr-10'>
@@ -103,7 +103,7 @@ function AboutMe() {
                 <a
                   key={index}
                   onClick={() => handleCardClick(item, index)}
-                  className={`shadow-[-5px_10px_20px_0px_theme(colors.brand.light)] relative cursor-pointer transition-all transform duration-300 group rounded-xl center p-6 lg:p-10 flex flex-col justify-center  items-center ${
+                  className={`shadow-[-5px_10px_20px_0px_theme(colors.primary.light)] relative cursor-pointer transition-all transform duration-300 group rounded-xl center p-6 lg:p-10 flex flex-col justify-center  items-center ${
                     selectedIndex == index
                       ? " -translate-y-2 bg-dark-bg"
                       : "hover:bg-dark-bg hover:shadow-xl hover:-translate-y-2 bg-white"

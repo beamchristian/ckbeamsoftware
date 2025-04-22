@@ -18,7 +18,7 @@ function HomeComponent() {
     <>
       <div
         id='home'
-        className='bg-gradient-to-b from-brand-light to-light-bg min-h-[500px] max-h-[1200px] w-full h-full'
+        className='bg-gradient-to-b from-primary to-light-bg min-h-[500px] max-h-[1200px] w-full h-full'
       >
         <div className='container m-auto'>
           <div className='grid grid-cols-12'>
@@ -26,7 +26,7 @@ function HomeComponent() {
               <div className='container m-auto'>
                 <div className='lg:pl-24 sm:pl-10 pl-0 py-20 md:py-0 md:text-start text-center'>
                   <p
-                    className={`text-brand text-3xl md:text-base lg:text-2xl ${hind.className}`}
+                    className={`text-primary-light text-3xl md:text-base lg:text-2xl ${hind.className}`}
                   >
                     Hi There!
                   </p>
@@ -43,7 +43,7 @@ function HomeComponent() {
                   </h2>
                   <Link
                     href='/#portfolio'
-                    className={`cursor-pointer inline-block bg-brand transition-all duration-300 
+                    className={`cursor-pointer inline-block bg-primary transition-all duration-300 
                                 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase 
                                 md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 
                                 hover:bg-dark-text hover:show-lg transform hover:translate-y-1 ${hind.className}`}
@@ -55,7 +55,7 @@ function HomeComponent() {
                     download='CHRISTIAN_BEAM_Resume.pdf'
                     className={`ml-10 cursor-pointer inline-block bg-dark-text transition-all duration-300 
                                 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase 
-                                md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-brand 
+                                md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-primary-light hover:text-dark-text
                                 hover:show-lg transform hover:translate-y-1 ${hind.className}`}
                   >
                     My Resume
@@ -71,6 +71,7 @@ function HomeComponent() {
                 <Image
                   src='/Christian_Portrait.png'
                   decoding='async'
+                  priority
                   data-nimg='intrinsic'
                   width={0}
                   height={0}
@@ -81,7 +82,7 @@ function HomeComponent() {
               </div>
             </div>
           </div>
-          <div className='container m-auto absolute'>
+          <div className='container mt-8 md:mt-0 absolute '>
             <div className='px-3'>
               <div
                 className={`relative max-w-sm bottom-[70px] md:max-w-5xl xl:max-w-6xl 

@@ -90,7 +90,7 @@ function ContactForm() {
   };
 
   return (
-    <form className='flex flex-col gap-[20px]' onSubmit={handleSubmit}>
+    <form className=' flex flex-col gap-[20px]' onSubmit={handleSubmit}>
       <div className={`flex flex-col sm:flex-row gap-[20px] ${hind.className}`}>
         <input
           type='text'
@@ -145,7 +145,7 @@ function ContactForm() {
         {loading && (
           <div className='mb-3 text-center ml-5 w-6 h-6 border-t-2 border-blue-600 border-solid animate-spin rounded-full'></div>
         )}
-        <button className='bg-brand-light w-full sm:w-auto px-[30px] py-[12px] hover:bg-dark-text transition-colors duration-300 font-semibold rounded-lg text-white'>
+        <button className='bg-dark-text w-full sm:w-auto px-[30px] py-[12px] hover:bg-primary-light hover:text-dark-text transition-colors duration-300 font-semibold rounded-lg text-primary-light'>
           Send Us A Message
         </button>
       </div>

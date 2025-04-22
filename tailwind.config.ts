@@ -10,18 +10,25 @@ const config: Config = {
     extend: {
       colors: {
         // Suggested names based on usage in your code:
-        brand: {
-          light: "#48AFDE", // The blue from the gradient and shadow base
-          DEFAULT: "#47AEDE", // The slightly different blue used for buttons/text
+        primary: {
+          light: "hsl(0, 0%, 90%)",
+          DEFAULT: "hsl(199, 82%, 38%)", //  used for buttons/text
         },
-        "dark-text": "#223740", // Dark color used for headings and button contrast
+        "dark-text": "hsl(240, 12%, 24%)", // Dark color used for headings and button contrast
         "light-bg": {
           DEFAULT: "#EEF7FB", // Lightest color from the gradient
           alt: "#d9eef7", // Alternative light background
         },
         "dark-bg": "#476571",
         "dark-text-2": "#47626D",
-        // [#F7FBFD] need to add
+        "off-white": "#F7FBFD",
+        "off-white-2": "#EAF7FC",
+        "dark-gray": "#232323",
+        "medium-gray": "#7b858b",
+        "standard-gray": "#666666",
+        "skill-border": "#63C5F1",
+        "hover-light": "#405B66",
+        "portfolio-detail-text": "#6A787D",
       },
       backgroundImage: {
         // You can also define reusable gradients here if needed

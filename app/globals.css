@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --tw-primary: hsl(240, 12%, 24%);
 }
 
 body {
@@ -20,7 +21,7 @@ body {
   height: 2rem;
   width: 2rem;
   border-radius: 0.5rem;
-  background-color: #48afde;
+  background-color: var(--tw-primary);
   transition-duration: 0.5s;
   position: absolute;
 }
@@ -43,6 +44,10 @@ html {
     rgba(255, 255, 255, 0.6)
   );
   backdrop-filter: blur(4px);
+}
+
+.my-toast-container {
+  background-color: red; /* Use a specific color value or Tailwind color utility */
 }
 
 .slick-slider {
@@ -99,7 +104,7 @@ button.slick-next::before {
 
 @media (min-width: 1288px) {
   .headerShow {
-    background-color: #fff;
+    background-color: hsl(199, 82%, 38%);
     box-shadow: #48afde -1px 25px 50px 10px;
   }
 }
