@@ -1,10 +1,25 @@
 // app/api/github-contributions/beamchristian/route.ts
-import { ContributionApiResponse } from "@/Types/Types";
 import { NextResponse } from "next/server";
 
 // Optional: Configure route segment options if needed (e.g., caching)
 // export const revalidate = 3600; // Cache the API route response for 1 hour
 
+// Defines the structure of a single contribution day,
+// which is expected by react-github-calendar
+interface Contribution {
+  date: string; // YYYY-MM-DD format
+  count: number;
+  level: 0 | 1 | 2 | 3 | 4; // Level of contribution intensity
+}
+// Defines the structure of the response from the github-contributions-api
+interface ContributionApiResponse {
+  contributions?: Contribution[]; // Array of contribution days
+  total?: {
+    [year: string]: number; // Total contributions per year (e.g., { "2023": 1234, "2024": 567 })
+  };
+  // The API might return other fields, but these are the ones used in your code
+  error?: string; // Add an optional error field just in case the API returns it
+}
 // Remove the { params } argument as the route is now static
 export async function GET() {
   // Hardcoding the username is correct for this static route
