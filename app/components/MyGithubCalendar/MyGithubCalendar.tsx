@@ -3,6 +3,7 @@
 
 import React, { useEffect, useRef, useState } from "react"; // Import useState
 import GitHubCalendar from "react-github-calendar";
+import GithubSVG from "./GithubSVG";
 
 // --- Component Props ---
 interface MyGithubCalendarProps {
@@ -50,14 +51,7 @@ export default function MyGithubCalendar({
       setContributionData(null); // Clear previous data
 
       try {
-        // Construct the URL - still need the base URL correctly
-        // Note: process.env.VERCEL_URL won't be available on the client
-        // You might need a different strategy for the base URL in a client component
-        // A common way is to use a public env var or just rely on relative path if fetching from same origin
-        // For simplicity, let's assume relative path if on the same origin
         const internalApiUrl = `/api/github-contributions/${username}`; // Use relative path
-
-        console.log(`Client Component: Fetching ${internalApiUrl}`);
 
         const response = await fetch(internalApiUrl); // Client-side fetch
 
@@ -165,6 +159,13 @@ export default function MyGithubCalendar({
 
   return (
     <div ref={calendarRef} className={className}>
+      <div className='flex justify-between mb-4'>
+        <h2 className='mb-2'>Github Contributions</h2>
+        <div className=''>
+          <GithubSVG />
+        </div>
+      </div>
+
       <GitHubCalendar
         username={username}
         data={contributions}
