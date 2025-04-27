@@ -1,12 +1,12 @@
 // app/api/github-contributions/beamchristian/route.ts
 import { ContributionApiResponse } from "@/Types/github";
-import { NextResponse, type NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
 // Optional: Configure route segment options if needed (e.g., caching)
 // export const revalidate = 3600; // Cache the API route response for 1 hour
 
 // Remove the { params } argument as the route is now static
-export async function GET(request: NextRequest) {
+export async function GET() {
   // Hardcoding the username is correct for this static route
   const username = "beamchristian";
   const currentYear = new Date().getFullYear();
