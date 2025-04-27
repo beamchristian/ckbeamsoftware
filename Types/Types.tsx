@@ -14,6 +14,7 @@ export interface PortfolioDataType {
   repo: string;
   des: string;
   des1: string;
+  skills: string[];
   images: string[];
 }
 

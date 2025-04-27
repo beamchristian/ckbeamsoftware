@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Previous from "./previous-svg";
 import Next from "./next-svg";
-// Import Link for client-side navigation
 import Link from "next/link";
 
 const hind = Hind({
@@ -15,18 +14,17 @@ const hind = Hind({
 
 type PortfolioDetailsDesignProps = {
   data: PortfolioDataType;
-  id: string; // Keep as string, handle conversion inside
+  id: string;
   DataArray: PortfolioDataType[];
 };
 
-// Rename the function to start with an uppercase letter
 function PortfolioDetailsDesign({
   id,
   data,
   DataArray,
 }: PortfolioDetailsDesignProps) {
-  const [nextId, setNextId] = useState(0); // Renamed state variable for clarity
-  const [prevId, setPrevId] = useState(0); // Renamed state variable for clarity
+  const [nextId, setNextId] = useState(0);
+  const [prevId, setPrevId] = useState(0);
 
   useEffect(() => {
     // Use parseInt for converting string ID from URL param/prop
@@ -35,21 +33,17 @@ function PortfolioDetailsDesign({
 
     // Basic validation in case parseInt fails or id is somehow invalid
     if (isNaN(currentIdNum) || arrayLength === 0) {
-      // Handle error case appropriately, maybe redirect or show error message
       console.error("Invalid ID or empty data array");
       return;
     }
 
     // Set next index/ID
-    setNextId((currentIdNum + 1) % arrayLength); // Use modulo for clean wrapping
+    setNextId((currentIdNum + 1) % arrayLength);
 
     // Set prev index/ID
-    setPrevId((currentIdNum - 1 + arrayLength) % arrayLength); // Use modulo for clean wrapping (handles negative result)
-  }, [id, DataArray.length]); // Dependencies are correct
+    setPrevId((currentIdNum - 1 + arrayLength) % arrayLength);
+  }, [id, DataArray.length]);
 
-  // No need for separate PushToNext/Prev functions when using <Link>
-
-  // --- Component Return ---
   return (
     <>
       {/* Consider if this overlay is needed or if styling can be applied differently */}
@@ -58,15 +52,13 @@ function PortfolioDetailsDesign({
       {/* --- Header Image Section --- */}
       <div className='relative h-[400px] lg:mt-24 sm:mt-0'>
         {" "}
-        {/* Added height to parent for layout="fill" */}
         {data?.images?.[0] && ( // Check if image exists
           <Image
             src={data.images[0]}
             alt={`${data?.title || "Portfolio"} banner`} // More descriptive alt text
             fill // Use fill layout to cover the parent container
-            style={{ objectFit: "cover" }} // Control how the image covers the area
-            priority // Consider adding priority if this is the LCP image
-            // Removed width/height/sizes as 'fill' handles this
+            priority
+            className='object-cover'
           />
         )}
       </div>
@@ -82,11 +74,6 @@ function PortfolioDetailsDesign({
       >
         <div className={`container m-auto`}>
           <div className={`max-w-[650px] w-[100%] m-auto`}>
-            <p
-              className={`opacity-3 sm:text-left text-center font-sans text-dark-text mb-3`}
-            >
-              Project Sample
-            </p>
             <h1 className='opacity-3 text-dark-text sm:text-left text-center w-full sm:w-3/4 font-recoletaBold text-4x md:text-4xl lg:text-4xl xl:text-4xl'>
               {data?.title}
             </h1>
@@ -136,31 +123,33 @@ function PortfolioDetailsDesign({
             <p className='text-[14px] font-sans mb-4 text-dark-text'>
               {data?.des}
             </p>
-            <p id='highlight' className='my-2 text-dark text-[20px] font-sans'>
+            <h2
+              id='highlight'
+              className='my-2 text-dark-text font-sans font-bold'
+            >
               Project Descriptions
-            </p>
+            </h2>
             <p className='text-[14px] font-sans mb-4 text-dark-text'>
               {data?.des1}
             </p>
+
+            <h2 className='font-sans font-bold text-dark-text'>Repo: </h2>
+            <Link
+              className='font-sans hover:text-primary'
+              href={`${data?.repo}`}
+            >
+              {data?.name} Repo
+            </Link>
             {/* Tech Stack/Tags */}
-            <div className='flex flex-wrap'>
-              {/* Consider mapping these from data if they vary per project */}
-              <span
-                className={`mr-5 text-[14px] bg-skill-border lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-portfolio-detail-text`}
-              >
-                UI/UX Design
-              </span>
-              <span
-                className={`mr-5 text-[14px] bg-skill-border lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-portfolio-detail-text`}
-              >
-                Next.js
-              </span>
-              <span
-                className={`mr-5 text-[14px] bg-skill-border lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-portfolio-detail-text`}
-              >
-                React.js
-              </span>
-              {/* ... other tags ... use <span> or <div> instead of <h1> for tags */}
+            <div className='flex flex-wrap mt-3'>
+              {data?.skills?.map((item, index) => (
+                <span
+                  key={index}
+                  className={`mr-5 text-[14px] bg-skill-border lg:bg-light-bg px-2 py-1 rounded-xl font-sans mb-4 text-white lg:text-portfolio-detail-text`}
+                >
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
         </div>

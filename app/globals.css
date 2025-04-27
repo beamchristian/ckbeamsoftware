@@ -50,10 +50,6 @@ html {
   background-color: red; /* Use a specific color value or Tailwind color utility */
 }
 
-.slick-slider {
-  border-radius: 15px;
-}
-
 button.slick-prev::before {
   font-size: 30px;
   right: 25px;

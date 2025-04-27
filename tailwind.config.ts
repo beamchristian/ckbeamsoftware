@@ -9,15 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Suggested names based on usage in your code:
         primary: {
           light: "hsl(0, 0%, 90%)",
-          DEFAULT: "hsl(199, 82%, 38%)", //  used for buttons/text
+          DEFAULT: "hsl(199, 82%, 38%)",
         },
-        "dark-text": "hsl(240, 12%, 24%)", // Dark color used for headings and button contrast
+        "dark-text": "hsl(240, 12%, 24%)",
         "light-bg": {
-          DEFAULT: "#EEF7FB", // Lightest color from the gradient
-          alt: "#d9eef7", // Alternative light background
+          DEFAULT: "#EEF7FB",
+          alt: "#d9eef7",
         },
         "dark-bg": "#476571",
         "dark-text-2": "#47626D",
