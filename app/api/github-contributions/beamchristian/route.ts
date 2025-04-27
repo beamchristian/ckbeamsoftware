@@ -1,5 +1,5 @@
 // app/api/github-contributions/beamchristian/route.ts
-import { ContributionApiResponse } from "@/Types/github";
+import { ContributionApiResponse } from "@/Types/Types";
 import { NextResponse } from "next/server";
 
 // Optional: Configure route segment options if needed (e.g., caching)
