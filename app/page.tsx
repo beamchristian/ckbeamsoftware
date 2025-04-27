@@ -3,6 +3,7 @@ import HomeComponent from "./components/HomeComponent/HomeComponent";
 import MySlider from "./components/SliderCard/MySlider";
 import AboutMe from "./components/AboutMe/AboutMe";
 import CallToAction from "./components/CallToAction/CallToAction";
+import MyGithubCalendar from "./components/MyGithubCalendar/MyGithubCalendar";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -40,6 +41,9 @@ export default async function Home() {
           </div>
           <div className='bg-light-bg rounded-xl'>
             <MySlider />
+          </div>
+          <div className='mt-6 border-2 bg-primary-light rounded-xl p-3'>
+            <MyGithubCalendar username='beamchristian' />
           </div>
         </div>
       </div>
