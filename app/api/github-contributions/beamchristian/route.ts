@@ -1,4 +1,3 @@
-// app/api/github-contributions/beamchristian/route.ts
 import { NextResponse } from "next/server";
 
 // Optional: Configure route segment options if needed (e.g., caching)
@@ -17,10 +16,8 @@ interface ContributionApiResponse {
   total?: {
     [year: string]: number; // Total contributions per year (e.g., { "2023": 1234, "2024": 567 })
   };
-  // The API might return other fields, but these are the ones used in your code
   error?: string; // Add an optional error field just in case the API returns it
 }
-// Remove the { params } argument as the route is now static
 export async function GET() {
   // Hardcoding the username is correct for this static route
   const username = "beamchristian";
