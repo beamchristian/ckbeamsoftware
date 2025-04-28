@@ -4,7 +4,6 @@
 import React, { useEffect, useRef, useState } from "react"; // Import useState
 import GitHubCalendar from "react-github-calendar";
 import GithubSVG from "./GithubSVG";
-import useSize from "@react-hook/size";
 
 // --- Component Props ---
 interface MyGithubCalendarProps {
@@ -87,7 +86,7 @@ export default function MyGithubCalendar({
     } else {
       setBlockSize(14);
     }
-  }, [windowSize.width]);
+  }, [windowSize.width, windowSize.height]);
 
   // useEffect to perform client-side data fetching after mount
   useEffect(() => {
