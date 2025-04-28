@@ -159,11 +159,9 @@ export default function MyGithubCalendar({
 
   return (
     <div ref={calendarRef} className={className}>
-      <div className='flex justify-between mb-4'>
-        <h2 className='mb-2'>Github Contributions</h2>
-        <div className=''>
-          <GithubSVG />
-        </div>
+      <div className='flex justify-between mb-4 font-menlo'>
+        <h2 className='mb-2 font-bold'>Github Contributions</h2>
+        <GithubSVG />
       </div>
 
       <GitHubCalendar

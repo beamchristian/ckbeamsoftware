@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        menlo: "var(--font-menlo-local)", // Define a new utility class 'font-menlo'
+      },
       colors: {
         primary: {
           light: "hsl(0, 0%, 90%)",

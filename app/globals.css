@@ -7,11 +7,18 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --tw-primary: hsl(240, 12%, 24%);
+  --font-menlo-stack: "Menlo", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   font-family: "Recoleta", sans-serif;
+}
+
+.react-activity-calendar {
+  font-family: var(--font-menlo-stack);
+  font-weight: bold;
 }
 
 .menu-effect {

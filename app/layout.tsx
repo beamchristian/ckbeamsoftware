@@ -23,6 +23,18 @@ const poppins = localFont({
   variable: "--font-Recoleta-Black",
 });
 
+const monloLocal = localFont({
+  src: [
+    {
+      path: "../public/fonts/menlo-regular-webfont.woff2", // Adjust path relative to this file
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  display: "swap", // Optional: control how the font is displayed while loading
+  variable: "--font-menlo-local", // Define a CSS variable
+});
+
 export const metadata: Metadata = {
   title: "Home | CKBEAM-SOFTWARE",
   description:
@@ -35,7 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className={`${monloLocal.variable}`}
+    >
       <body className={poppins.className}>
         {" "}
         <ToastContainer />
