@@ -16,7 +16,7 @@ body {
   font-family: "Recoleta", sans-serif;
 }
 
-.react-activity-calendar {
+article.react-activity-calendar {
   font-family: var(--font-menlo-stack);
   font-weight: bold;
 }

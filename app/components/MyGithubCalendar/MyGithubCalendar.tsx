@@ -4,11 +4,16 @@
 import React, { useEffect, useRef, useState } from "react"; // Import useState
 import GitHubCalendar from "react-github-calendar";
 import GithubSVG from "./GithubSVG";
+import useSize from "@react-hook/size";
 
 // --- Component Props ---
 interface MyGithubCalendarProps {
   username: string;
   className?: string;
+}
+interface WindowSize {
+  width: number | undefined;
+  height: number | undefined;
 }
 
 // Defines the structure of a single contribution day,
@@ -42,6 +47,47 @@ export default function MyGithubCalendar({
     useState<ContributionApiResponse | null>(null);
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true); // Add loading state
+  const [windowSize, setWindowSize] = useState<WindowSize>({
+    width: undefined,
+    height: undefined,
+  });
+  const [blockSize, setBlockSize] = useState<number>(0);
+
+  useEffect(() => {
+    // Only run on client
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width and height to state
+      setWindowSize({
+        width: window.innerWidth, // window.innerWidth is a number
+        height: window.innerHeight, // window.innerHeight is a number
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, [windowSize.height, windowSize.width]);
+
+  useEffect(() => {
+    if (windowSize.height === undefined || windowSize.width === undefined) {
+      return;
+    }
+    if (windowSize.width > 1279) {
+      setBlockSize(24);
+    } else {
+      setBlockSize(14);
+    }
+  }, [windowSize.width]);
 
   // useEffect to perform client-side data fetching after mount
   useEffect(() => {
@@ -105,34 +151,13 @@ export default function MyGithubCalendar({
     fetchData();
   }, [username]); // Re-run fetch if username changes
 
-  // useEffect to handle scrolling after data is loaded and component updates
-  useEffect(() => {
-    // Only attempt to scroll if data is loaded and there's no error
-    if (!isLoading && !fetchError && contributionData?.contributions) {
-      // Find the scrollable element within the calendar
-      // This might need adjustment based on the exact DOM structure of react-github-calendar
-      // Often the scrollable container is a div wrapping the SVG
-      const scrollableElement = calendarRef.current?.querySelector(
-        ".react-github-calendar-svg"
-      ); // Use a more specific class if available or inspect DOM
-
-      if (scrollableElement) {
-        // Scroll to the rightmost part
-        scrollableElement.scrollLeft = scrollableElement.scrollWidth;
-        console.log("Scrolled calendar to end"); // Add log to confirm
-      } else {
-        console.log("Scrollable element not found"); // Log if element not found
-      }
-    }
-  }, [isLoading, fetchError, contributionData]); // Dependencies: run when loading/error state changes or data arrives
-
   // --- Loading State ---
   if (isLoading) {
     return (
       <div
         className={`p-4 border border-blue-300 bg-blue-50 text-blue-700 rounded ${className}`}
       >
-        <p>Loading contributions for {username}...</p>
+        <p>Loading github contributions for {username}...</p>
       </div>
     );
   }
@@ -168,7 +193,7 @@ export default function MyGithubCalendar({
         username={username}
         data={contributions}
         colorScheme='light'
-        blockSize={14}
+        blockSize={blockSize}
         blockMargin={4}
         fontSize={12}
       />

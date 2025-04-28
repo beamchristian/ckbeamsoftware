@@ -22,11 +22,9 @@ export async function GET() {
   // Hardcoding the username is correct for this static route
   const username = "beamchristian";
   const currentYear = new Date().getFullYear();
-  console.log(currentYear);
 
   // The external API endpoint
   const externalApiURL = `https://github-contributions-api.jogruber.de/v4/${username}?y=${currentYear}`;
-  console.log(`API Route: Fetching ${externalApiURL}`);
 
   try {
     // Fetch from the external API within the API route

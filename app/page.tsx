@@ -42,7 +42,7 @@ export default async function Home() {
           <div className='bg-light-bg rounded-xl'>
             <MySlider />
           </div>
-          <div className='mt-6 border-2 bg-primary-light rounded-xl p-3'>
+          <div className='mt-6 w-[100%] border-2 bg-primary-light rounded-xl p-3'>
             <MyGithubCalendar username='beamchristian' />
           </div>
         </div>
