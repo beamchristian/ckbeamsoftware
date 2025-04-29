@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Hind } from "next/font/google";
 
-import { z, ZodIssue } from "zod"; // Zod for schema validation
+import { z } from "zod"; // Zod for schema validation
 
 const hind = Hind({
   subsets: ["latin"],
