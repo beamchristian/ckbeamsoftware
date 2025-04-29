@@ -83,25 +83,53 @@ button.slick-next::before {
   .my-slider {
     width: 100% !important;
   }
-}
 
-@media (max-width: 640px) {
-  .my-slider {
-    width: 100% !important;
+  /* Style the previous button container */
+  button.slick-prev {
+    /* Slick buttons are usually absolute, position them relative to the slider container */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for its own height */
+    left: 32px; /* Position 10px from the left edge */
+    z-index: 10; /* Ensure it's above slider content */
+    /* Add any other button styles like width, height, background, border if needed */
+    width: 30px; /* Example size */
+    height: 30px; /* Example size */
+    border: none;
+    background: transparent; /* Or a semi-transparent background */
+    cursor: pointer; /* Make sure cursor indicates clickable */
   }
 
-  button.slick-prev::before {
-    font-size: 30px;
-    left: 35px;
-    position: relative;
-    z-index: 1;
+  /* Style the next button container */
+  button.slick-next {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for its own height */
+    right: 26px;
+    z-index: 10; /* Ensure it's above slider content */
+    /* Add any other button styles */
+    width: 30px; /* Example size */
+    height: 30px; /* Example size */
+    border: none;
+    background: transparent; /* Or a semi-transparent background */
+    cursor: pointer; /* Make sure cursor indicates clickable */
   }
 
+  /* Style the icons (keep size, remove positioning) */
+  button.slick-prev::before,
   button.slick-next::before {
     font-size: 30px;
-    right: 45px;
-    position: relative;
-    z-index: 1;
+    /* Add color or other visual styles for the icon */
+    color: #fff; /* Example color */
+    display: block; /* Ensure it behaves like a block for centering if needed */
+    text-align: center; /* Center the icon within the button if button has size */
+    line-height: 1; /* Adjust line height */
+  }
+
+  /* If slick adds .slick-disabled class, dim the buttons */
+  .slick-disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Disable clicks when disabled */
   }
 }
 

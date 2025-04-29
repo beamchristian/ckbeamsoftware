@@ -1,6 +1,7 @@
 import React from "react";
 import Accordian from "./Accordian";
-import { company, helping, legal, service } from "@/utils/variables";
+import { company, helping, service } from "@/utils/variables";
+import Link from "next/link"; // Make sure Link is imported
 
 export default function Footer() {
   const date = new Date();
@@ -10,80 +11,131 @@ export default function Footer() {
     <div id='footer'>
       <footer className='bg-dark-gray'>
         <div className='mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8'>
-          <div className='container mx-auto p-4 md:hidden block mt-10'>
-            <Accordian title='Services' content={service} />
-            <Accordian title='Company' content={company} />
-            <Accordian title='Helpful Links' content={helping} />
-            <Accordian title='Legal Policy' content={legal} />
+          {/* Mobile Accordion Section */}
+          <div className='container mx-auto md:hidden block'>
+            <Accordian
+              title='Services'
+              content={service.map((item) => item.text)}
+            />
+            {/* <Accordian
+              title='Company'
+              content={company.map((item) => item.text)}
+            /> */}
+            <Accordian
+              title='Helpful Links'
+              content={helping.map((item) => item.text)}
+            />
+            {/* <Accordian
+              title='Legal Policy'
+              content={legal.map((item) => item.text)}
+            /> */}
           </div>
 
-          <div className='grid gap-6 grid-cols-5 md:pt-20'>
-            <div className='md:block hidden'>
-              <div className='text-blue-500'></div>
-              <p className='max-w-xs text-medium-gray font-sans '>
-                Delivering Quality Software and Service
-              </p>
-              <p className='text-xs text-medium-gray font-sans mt-2'>
-                &copy; {currentYear} ckbeamsoftware
-              </p>
-            </div>
+          {/* Desktop Grid Section */}
 
+          <div className='flex justify-center flex-wrap gap-8 md:pt-10'>
+            {/* Services Column */}
             <div className='md:block hidden'>
               <p className='font-medium text-white font-sans'>Services</p>
               <ul className='mt-6 space-y-4 text-sm'>
-                {service.map((item) => (
-                  <li key={item}>
-                    <a className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'>
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {service.map(
+                  (
+                    item // item is now { text, href }
+                  ) => (
+                    <li key={item.text}>
+                      {" "}
+                      {/* Use item.text (or item.href) for the key */}
+                      <Link
+                        href={item.href} // Use the href property from the object
+                        className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'
+                      >
+                        {item.text}{" "}
+                        {/* Use the text property from the object */}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
-            <div className='md:block hidden'>
-              <p className='font-medium text-white font-sans'>Company Policy</p>
+
+            {/* Company Links Column */}
+            {/* <div className='md:block hidden'>
+              <p className='font-medium text-white font-sans'>Company Policy</p>{" "}
               <ul className='mt-6 space-y-4 text-sm'>
-                {company.map((item) => (
-                  <li key={item}>
-                    <a className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'>
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {company.map(
+                  (
+                    item // { text, href }
+                  ) => (
+                    <li key={item.text}>
+                      {" "}
+                      <Link
+                        href={item.href} 
+                        className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'
+                      >
+                        {item.text}{" "}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
-            </div>
+            </div> */}
+
+            {/* Helpful Links Column */}
             <div className='md:block hidden'>
               <p className='font-medium text-white font-sans'>Helpful Links</p>
               <ul className='mt-6 space-y-4 text-sm'>
-                {helping.map((item) => (
-                  <li key={item}>
-                    <a className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'>
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {helping.map(
+                  (
+                    item //  { text, href }
+                  ) => (
+                    <li key={item.text}>
+                      {" "}
+                      <Link
+                        href={item.href}
+                        className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'
+                      >
+                        {item.text}{" "}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
-            <div className='md:block hidden'>
+
+            {/* Legal Policies Column */}
+            {/* <div className='md:block hidden'>
               <p className='font-medium text-white font-sans'>Legal Policies</p>
               <ul className='mt-6 space-y-4 text-sm'>
-                {legal.map((item) => (
-                  <li key={item}>
-                    <a className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'>
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {legal.map(
+                  (
+                    item // item is now { text, href }
+                  ) => (
+                    <li key={item.text}>
+                      {" "} */}
+            {/* Use item.text (or item.href) for the key */}
+            {/* <Link
+                        href={item.href} // Use the href property from the object
+                        className='text-medium-gray font-sans hover:opacity-75 cursor-pointer'
+                      >
+                        {item.text}{" "} */}
+            {/* Use the text property from the object */}
+            {/* </Link>
+                    </li>
+                  )
+                )}
               </ul>
-            </div>
+            </div> */}
           </div>
+
           <div className='xl:max-w-6xl 2xl:max-w-7xl px-10 md:px-20 xl:px-44 mx-auto sm:py-10 overflow-hidden'>
             <div className='flex flex-wrap items-center justify-center gap-10'>
+              {/* GitHub Link */}
               <div className='w-1/3 sm:w-auto sm:mx-4 mb-10 sm:mb-0'>
                 <a
                   className='group flex flex-col items-center justify-center'
                   target='_blank'
                   href='https://github.com/beamchristian'
+                  rel='noopener noreferrer' // Good practice for target="_blank"
                 >
                   <svg
                     stroke='currentColor'
@@ -103,11 +155,13 @@ export default function Footer() {
                 </a>
               </div>
 
+              {/* LinkedIn Link */}
               <div className='w-1/3 sm:w-auto sm:mx-4 mb-10 sm:mb-0'>
                 <a
                   className='group flex flex-col items-center justify-center'
                   target='_blank'
                   href='https://www.linkedin.com/in/christian-beam-64b5b5a0/'
+                  rel='noopener noreferrer' // Good practice for target="_blank"
                 >
                   {" "}
                   <svg
@@ -150,6 +204,15 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+          </div>
+          <div className='flex justify-center items-center flex-col'>
+            <div className='text-blue-500'></div>{" "}
+            <p className='max-w-xs text-medium-gray font-sans '>
+              Delivering Quality Software and Service
+            </p>
+            <p className='text-xs text-medium-gray font-sans mt-2'>
+              &copy; {currentYear} ckbeamsoftware
+            </p>
           </div>
         </div>
       </footer>

@@ -78,7 +78,7 @@ export default function MyGithubCalendar({
   }, [windowSize.height, windowSize.width]);
 
   useEffect(() => {
-    if (windowSize.height === undefined || windowSize.width === undefined) {
+    if (windowSize.width === undefined) {
       return;
     }
     if (windowSize.width > 1279) {
@@ -86,7 +86,7 @@ export default function MyGithubCalendar({
     } else {
       setBlockSize(14);
     }
-  }, [windowSize.width, windowSize.height]);
+  }, [windowSize.width]);
 
   // useEffect to perform client-side data fetching after mount
   useEffect(() => {

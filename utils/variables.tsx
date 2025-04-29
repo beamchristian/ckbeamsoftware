@@ -310,18 +310,43 @@ export const TestimonialSettings = {
   ],
 };
 
+// utils/variables.js
+
+// Optional: A helper function to create URL-friendly slugs from text
+const slugify = (text: string) => {
+  return text
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "");
+};
+
 export const service = [
-  "SEO Optimisation",
-  "Web Page Creation",
-  "Custom Software",
-  "Automization",
-  "Database Management",
+  {
+    text: "Web Page Creation",
+    href: `/services/${slugify("Web Page Creation")}`,
+  },
+  { text: "Custom Software", href: `/services/${slugify("Custom Software")}` },
+  { text: "Automization", href: `/services/${slugify("Automization")}` },
+  {
+    text: "Database Management",
+    href: `/services/${slugify("Database Management")}`,
+  },
 ];
-export const company = ["About", "Meet the Team", "Accounts Review"];
-export const helping = ["Contact", "FAQs", "Live Chat"];
-export const legal = [
-  "Accessibility",
-  "Returns Policy",
-  "Refund Policy",
-  " Hiring Statistics",
+
+export const company = [
+  { text: "About", href: `/company/${slugify("About")}` },
+  { text: "Meet the Team", href: `/company/${slugify("Meet the Team")}` },
+  { text: "Accounts Review", href: `/company/${slugify("Accounts Review")}` },
 ];
+
+export const helping = [
+  // Keeping the href as you had it for Contact
+  { text: "Contact", href: "/contact-me" },
+];
+
+// export const legal = [
+//   { text: "Accessibility", href: `/legal/${slugify("Accessibility")}` },
+//   { text: "Returns Policy", href: `/legal/${slugify("Returns Policy")}` },
+//   { text: "Refund Policy", href: `/legal/${slugify("Refund Policy")}` },
+//   { text: "Hiring Statistics", href: `/legal/${slugify("Hiring Statistics")}` },
+// ];
