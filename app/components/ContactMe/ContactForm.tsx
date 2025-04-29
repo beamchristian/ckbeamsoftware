@@ -23,7 +23,24 @@ const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"), // Name must be a non-empty string
   // Email must be a non-empty string and a valid email format
   email: z.string().email("Invalid email format").min(1, "Email is required"),
-  phoneNumber: z.string().min(1, "Phone number is required"), // Phone number must be a non-empty string
+  phoneNumber: z
+    .string()
+    .min(1, "Phone number is required") // Ensure the field is not empty initially
+    // Refine the string: check the length AFTER removing non-digits
+    .refine(
+      (value) => {
+        const digitsOnly = value.replace(/\D/g, ""); // Remove all non-digit characters
+        // Check if the number of digits is within a typical phone number length range (e.g., 7 to 15 digits)
+        // Adjust the range (7, 15) based on the expected phone number formats you support.
+        // 7 is a common minimum for local numbers, 10 for US with area code, up to 15 for international.
+        return digitsOnly.length >= 7 && digitsOnly.length <= 15;
+      },
+      {
+        // Custom error message if the digit count is outside the specified range
+        message: "Please enter a valid number of digits (7-15 expected)",
+      }
+    ),
+
   subject: z.string().min(1, "Subject is required"), // Subject must be a non-empty string
   message: z.string().min(1, "Message is required"), // Message must be a non-empty string
 });
