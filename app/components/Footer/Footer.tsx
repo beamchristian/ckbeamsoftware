@@ -1,6 +1,6 @@
 import React from "react";
 import Accordian from "./Accordian";
-import { company, helping, service } from "@/utils/variables";
+import { helping, service } from "@/utils/variables";
 import Link from "next/link"; // Make sure Link is imported
 
 export default function Footer() {
