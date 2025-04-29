@@ -39,7 +39,7 @@ export default async function Home() {
               frameworks, tools, and best practices.
             </p>
           </div>
-          <div className='bg-light-bg rounded-xl'>
+          <div className='bg-light-bg rounded-xl portfolio-slider'>
             <MySlider />
           </div>
           <div className='mt-6 w-[100%] border-2 bg-primary-light rounded-xl p-3'>

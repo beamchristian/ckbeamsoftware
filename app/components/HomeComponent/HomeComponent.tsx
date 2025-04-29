@@ -92,7 +92,9 @@ function HomeComponent() {
                   boxShadow: "rgba(72, 175, 222, 0.5) -10px 25px 50px 10px",
                 }}
               >
-                <div className={`lg:py-10 md:py-6 sm:py-6 cursor-all-scroll`}>
+                <div
+                  className={`lg:py-10 md:py-6 sm:py-6 cursor-all-scroll skills-slider`}
+                >
                   <Slider {...carouselSettings}>
                     <Image
                       height={8}

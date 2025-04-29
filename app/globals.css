@@ -57,13 +57,13 @@ html {
   background-color: red; /* Use a specific color value or Tailwind color utility */
 }
 
-button.slick-prev::before {
+#projects-slider button.slick-prev::before {
   font-size: 30px;
   right: 25px;
   position: relative;
 }
 
-button.slick-next::before {
+#projects-slider button.slick-next::before {
   font-size: 30px;
   left: 15px;
   position: relative;
@@ -85,7 +85,7 @@ button.slick-next::before {
   }
 
   /* Style the previous button container */
-  button.slick-prev {
+  .portfolio-slider button.slick-prev {
     /* Slick buttons are usually absolute, position them relative to the slider container */
     position: absolute;
     top: 50%; /* Center vertically */
@@ -101,7 +101,7 @@ button.slick-next::before {
   }
 
   /* Style the next button container */
-  button.slick-next {
+  .portfolio-slider button.slick-next {
     position: absolute;
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust for its own height */
@@ -116,8 +116,8 @@ button.slick-next::before {
   }
 
   /* Style the icons (keep size, remove positioning) */
-  button.slick-prev::before,
-  button.slick-next::before {
+  .portfolio-slider button.slick-prev::before,
+  .portfolio-slider button.slick-next::before {
     font-size: 30px;
     /* Add color or other visual styles for the icon */
     color: #fff; /* Example color */
@@ -127,7 +127,7 @@ button.slick-next::before {
   }
 
   /* If slick adds .slick-disabled class, dim the buttons */
-  .slick-disabled {
+  .portfolio-slider .slick-disabled {
     opacity: 0.5;
     pointer-events: none; /* Disable clicks when disabled */
   }
